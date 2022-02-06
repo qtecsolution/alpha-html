@@ -1,0 +1,32 @@
+<svg width="729" height="1120" viewBox="0 0 729 1120" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#authbg-5)">
+<rect width="729" height="1120" fill="url(#authbg-1)"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M702.601 807.788C671.516 759.391 605.142 756.343 548.593 746.226C497.958 737.168 445.061 728.286 400.409 753.727C355.118 779.531 321.437 826.596 316.349 878.548C311.732 925.68 356.383 958.475 376.136 1001.56C400.695 1055.12 391.195 1131.73 444.199 1157.38C499.428 1184.12 566.879 1153.76 616.583 1117.94C662.329 1084.97 680.991 1030.24 696.076 975.85C711.644 919.717 734.117 856.857 702.601 807.788Z" stroke="white" stroke-width="2"/>
+<circle cx="296.517" cy="685.945" r="25.5" transform="rotate(14.1047 296.517 685.945)" fill="url(#authbg-2)" fill-opacity="0.4"/>
+<circle cx="371" cy="1132" r="186" fill="url(#authbg-3)" fill-opacity="0.4"/>
+<circle cx="587.935" cy="693.166" r="118" transform="rotate(-174.464 587.935 693.166)" fill="url(#authbg-4)" fill-opacity="0.4"/>
+<path opacity="0.6" d="M-208.569 97.1551C-308.775 73.2685 -270.089 224.296 -270.089 224.296C-270.089 224.296 -327.662 586.161 206.74 574.622C618.084 565.741 561.441 435.818 465.636 363.252C429.195 345.61 232.887 294.569 135.343 130.371C37.7985 -33.8283 13.32 19.1922 -36.2473 78.874C-51.935 94.9204 -108.362 121.042 -208.569 97.1551Z" fill="white"/>
+<path d="M135.752 404.9C67.1601 422.414 109.329 476.871 138.987 501.91C165.37 551.879 283.86 625.802 546.763 521.746C809.667 417.689 712.43 364.667 630.949 351.163C603.141 352.085 519.566 336.756 407.724 268.071C295.883 199.385 245.791 286.521 234.725 338.675C230.314 353.452 204.344 387.385 135.752 404.9Z" fill="white" fill-opacity="0.5"/>
+</g>
+<defs>
+<linearGradient id="authbg-1" x1="364.5" y1="0" x2="364.5" y2="1120" gradientUnits="userSpaceOnUse">
+<stop stop-color="#E7FEFF"/>
+<stop offset="1" stop-color="#DCFFFF"/>
+</linearGradient>
+<radialGradient id="authbg-2" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(304.303 698.923) rotate(-125.724) scale(44.118)">
+<stop stop-color="#71F6FF"/>
+<stop offset="1" stop-color="#71DDFF" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="authbg-3" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(427.794 1226.66) rotate(-125.724) scale(321.802)">
+<stop stop-color="#71F6FF"/>
+<stop offset="1" stop-color="#71DDFF" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="authbg-4" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(623.966 753.217) rotate(-125.724) scale(204.154)">
+<stop stop-color="#71F6FF"/>
+<stop offset="1" stop-color="#71DDFF" stop-opacity="0"/>
+</radialGradient>
+<clipPath id="authbg-5">
+<rect width="729" height="1120" fill="white"/>
+</clipPath>
+</defs>
+</svg>

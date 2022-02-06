@@ -1,0 +1,35 @@
+// THEME COLORS
+$primary: #333333;
+$secondary: #5A5A5A;
+
+$primaryBg: #FDF9F2;
+$secondaryBg: #F9F8F8;
+$bannerBg: #F9F8F7;
+$textPlaceholder: #7C7C7C;
+$dividerBg: #DEE2E6;
+$submitBg: #353535;
+$footerText: #969696;
+$textStep: #626262;
+$textTestimonial: #535353;
+$testimonialBg: #FAF9F7;
+$dimondBorder: #ECECEC;
+$textSuccess: #69B756;
+$inputBorder: #CED3DB;
+$formBorder: #D8D8D8;
+$showroomBorder: rgba(21, 21, 21, 0.15);
+$scheduleBg: #0E0E0E;
+$textSchedule: #B9B8B8;
+$faqBtnBg: #EDEDED;
+
+// NORMAL COLORS
+$black: #000000;
+$white: #ffffff;
+
+// SHADOWS
+$shadow-1: rgba(162, 162, 162, 0.25);
+$banner: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 67.71%);
+
+$overlayBg: linear-gradient(0deg, $black 0%, rgba($black, 0) 86.04%);
+
+
+$box-shadow-1: 0rem .25rem .25rem $shadow-1;

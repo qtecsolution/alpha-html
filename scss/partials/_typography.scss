@@ -1,0 +1,78 @@
+/**==================================================
+                GOOGLE FONT CDN
+==================================================**/
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@300;400;500;600;700;800;900&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+
+/**==================================================
+                FONTS INFO START
+==================================================**/
+$encodeSans: 'Encode Sans';
+$montserrat: 'Montserrat';
+$font-styles: ('normal': normal, 'italic': italic, 'oblique': oblique);
+$font-weights: ('thin':100, 'light': 300, 'normal': normal, 'medium': 500, 'semibold': 600, 'bold': 700, 'black': 900);
+
+
+// SET FONT-FAMILY
+@function family($font-family) {
+	@return inspect($value: $font-family);
+}
+
+// SET FONT-STYLE
+@function style($style) {
+	@return map-get($font-styles, $style);
+}
+
+// SET FONT-STYLE
+@function size($size) {
+	@return (($size / $base) + rem);
+}
+
+// SET FONT-WEIGHT
+@function weight($weight) {
+	@return map-get($font-weights, $weight);
+}
+
+// SET LINE-HEIGHT
+@function line-height($line-height, $size) {
+	@return ($line-height / $size);
+}
+
+/**===============================================
+                FONT STYLE MIXINS
+===============================================**/
+
+// FONT WITHOUT PATH
+@mixin font-face($fontname, $fontstyle, $fontsize, $fontweight, $line-height) {
+	font: {
+		family: quote($fontname);
+		style: $fontstyle;
+		size: $fontsize;
+		weight: $fontweight;
+	}
+
+	line-height: $line-height;
+}
+
+// h1 {
+// 	@include font-face($montserrat, style('normal'), size(48), weight('normal'), line-height(70, 48));
+// }
+
+// h2 {
+// 	@include font-face($montserrat, style('normal'), size(36), weight('normal'), line-height(44, 36));
+// }
+
+// h3 {
+// 	@include font-face($montserrat, style('normal'), size(32), weight('normal'), line-height(32, 32));
+// }
+
+// h4 {
+// 	@include font-face($montserrat, style('normal'), size(30), weight('normal'), line-height(44, 30));
+// }
+
+// h5 {
+// 	@include font-face($montserrat, style('normal'), size(24), weight('normal'), line-height(31.68, 24));
+// }
+
+// h6 {
+// 	@include font-face($montserrat, style('normal'), size(20), weight('normal'), line-height(24, 20));
+// }
