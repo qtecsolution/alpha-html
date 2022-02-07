@@ -1,0 +1,124 @@
+.alpha-authentication {
+    display: flex;
+    @include w100;
+    height: 100vh;
+    overflow: hidden;
+
+    .authenticationbox {
+        width: 50%;
+        height: 100%;
+        padding: length(88) length(25) length(74);
+        @include flex-between;
+        flex-direction: column;
+        align-items: flex-start;
+
+        .auth-head {
+            .logo {
+                width: length(238);
+                height: length(59);
+
+                img {
+                    @include w100;
+                    object-fit: contain;
+                }
+            }
+        }
+
+        .authdetails {
+            &-header {
+                .welcometitle {
+
+                }
+            }
+
+            &-body {
+                .authtitle {}
+
+                .authenticationform {
+                    .inputbox {
+                        .infobox {
+                            .inputfield {}
+                        }
+
+                        .passwordbox {
+                            .inputfield {}
+
+                            .btn-toggle {}
+                        }
+
+                        .errormessage {}
+                    }
+
+                    .rememberme-forget {
+                        .rememberme {
+                            .remembercheck {}
+                            .rememberlabel {}
+                        }
+
+                        .forget {
+                            .authlink {}
+                        }
+                    }
+
+                    .submitbox {
+                        .btn-submit {
+
+                        }
+                    }
+                }
+            }
+        }
+        
+        .authfooter {
+            @include flex-center-between;
+            @include w100;
+
+            .copyright {
+                &-text {
+
+                }
+            }
+
+            .footlist {
+                &-link {
+
+                }
+            }
+        }
+    }
+
+    .authenticationinfo {
+        .auth-thumbnail {
+            img {
+                @include wh100;
+                object-fit: cover;
+                @include transitiontransform;
+
+                @include hover {
+                    @include transform(scale(1.1));
+                }
+            }
+        }
+
+        .authinfo {
+            &-header {
+                .authinfo-title {}
+
+                .titlebar {}
+            }
+
+            &-body {
+                .authinfotitles {
+                    .subtitle {}
+                    .title {}
+                }
+
+                .slogan {
+                    &-text {
+                        
+                    }
+                }
+            }
+        }
+    }
+}
