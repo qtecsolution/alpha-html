@@ -4,13 +4,503 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alpha | Add User</title>
+    <title>Alpha</title>
     <!-- FAVICON -->
     <link rel="shortcut icon" href="favicon.svg" type="image/svg">
+    <!-- BOOTSTAP CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- DROPZONE CSS -->
+    <link rel="stylesheet" href="assets/css/dropzone.min.css">
     <!-- ALPHA STYLE -->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    
+    <!-- ALPHA-HEADER START -->
+    <header class="header sticky-top">
+        <!-- HEADER-TOP MENU START -->
+        <div class="header-top">
+            <!-- SITE-LOGO START -->
+            <a href="index.html" class="logo">
+                <img src="assets/images/logo/logo.svg" alt="alpha-logo">
+            </a>
+            <!-- SITE-LOGO END -->
+            
+            <!-- HEADER-DROPDOWNS START -->
+            <div class="header-dropdowns">
+                <!-- ALPHA-NOTIFICATION START -->
+                <div class="notification">
+                    <a href="#" class="notificationlink">
+                        <span class="notifyicon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2 16C1.44772 16 1 16.4477 1 17C1 17.5523 1.44772 18 2 18V16ZM5 9H4H5ZM19 9H20H19ZM13.73 21L14.595 21.5018C14.7744 21.1924 14.775 20.8108 14.5965 20.5009C14.418 20.191 14.0876 20 13.73 20V21ZM10.27 21V20C9.91237 20 9.58196 20.191 9.40346 20.5009C9.22497 20.8108 9.22555 21.1924 9.405 21.5018L10.27 21ZM22 16H2V18H22V16ZM2 18C4.20914 18 6 16.2091 6 14H4C4 15.1046 3.10457 16 2 16V18ZM6 14V9H4V14H6ZM6 9C6 5.68629 8.68629 3 12 3V1C7.58172 1 4 4.58172 4 9H6ZM12 3C15.3137 3 18 5.68629 18 9H20C20 4.58172 16.4183 1 12 1V3ZM18 9V14H20V9H18ZM18 14C18 16.2091 19.7909 18 22 18V16C20.8954 16 20 15.1046 20 14H18ZM12.865 20.4982C12.6861 20.8066 12.3565 20.9965 12 20.9965V22.9965C13.0696 22.9965 14.0583 22.427 14.595 21.5018L12.865 20.4982ZM12 20.9965C11.6435 20.9965 11.3139 20.8066 11.135 20.4982L9.405 21.5018C9.9417 22.427 10.9304 22.9965 12 22.9965V20.9965ZM10.27 22H13.73V20H10.27V22Z" fill="#333333"/>
+                            </svg>
+                        </span>
+
+                        <div class="notifystatus"></div>
+                    </a>
+
+                    <!-- NOTIFICATION-DETAILS START -->
+                    <div class="notification-details">
+                        <!-- NOTIFICATION-HEADER START -->
+                        <div class="notification-header">
+                            <h5 class="notification-title">Notifications</h5>
+                        </div>
+                        <!-- NOTIFICATION-HEADER END -->
+
+                        <!-- NOTIFICATION-BODY START -->
+                        <div class="notification-body">
+                            <!-- EMPTY-NOTIFICATION START - IF NOTIFICATION DOESN'T EXISTS -->
+                            <div class="empty-notification">
+                                <img src="assets/images/empty-screens/empty-notification.svg" alt="empty-notification-thumbnail">
+                            </div>
+                            <!-- EMPTY-NOTIFICATION END -->
+
+                            <!-- NOTIFICATION-LIST START - IF GET NOTIFICATION -->
+                            <div class="notificationbox d-none">
+                                <div class="notification-list">
+                                    <!-- NOTIFICATION-INFO START -->
+                                    <div class="notification-info">
+                                        <a href="#">
+                                            <span class="notification-image">
+                                                <img src="assets/images/notifications/notification-1.svg" alt="notification-img">
+                                            </span>
+
+                                            <div class="notification-texts">
+                                                <p class="notification-text">
+                                                    Thank you for placing your order to Titan 
+                                                    Smart WatchCollection. Our customer 
+                                                    manager will contact you soon.
+                                                </p>
+
+                                                <small class="notification-date">
+                                                    <span class="notification-time">4</span> Days ago
+                                                </small>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <!-- NOTIFICATION-INFO END -->
+
+                                    <!-- NOTIFICATION-INFO START -->
+                                    <div class="notification-info">
+                                        <a href="#">
+                                            <span class="notification-image">
+                                                <img src="assets/images/notifications/notification-2.svg" alt="notification-img">
+                                            </span>
+
+                                            <div class="notification-texts">
+                                                <p class="notification-text">
+                                                    Thank you for placing your order to Titan 
+                                                    Smart WatchCollection. Our customer 
+                                                    manager will contact you soon.
+                                                </p>
+
+                                                <small class="notification-date">
+                                                    <span class="notification-time">4</span> Days ago
+                                                </small>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <!-- NOTIFICATION-INFO END -->
+
+                                    <!-- NOTIFICATION-INFO START -->
+                                    <div class="notification-info">
+                                        <a href="#">
+                                            <span class="notification-image">
+                                                <img src="assets/images/notifications/notification-1.svg" alt="notification-img">
+                                            </span>
+
+                                            <div class="notification-texts">
+                                                <p class="notification-text">
+                                                    Thank you for placing your order to Titan 
+                                                    Smart WatchCollection. Our customer 
+                                                    manager will contact you soon.
+                                                </p>
+
+                                                <small class="notification-date">
+                                                    <span class="notification-time">4</span> Days ago
+                                                </small>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <!-- NOTIFICATION-INFO END -->
+
+                                    <!-- NOTIFICATION-INFO START -->
+                                    <div class="notification-info">
+                                        <a href="#">
+                                            <span class="notification-image">
+                                                <img src="assets/images/notifications/notification-2.svg" alt="notification-img">
+                                            </span>
+
+                                            <div class="notification-texts">
+                                                <p class="notification-text">
+                                                    Thank you for placing your order to Titan 
+                                                    Smart WatchCollection. Our customer 
+                                                    manager will contact you soon.
+                                                </p>
+
+                                                <small class="notification-date">
+                                                    <span class="notification-time">4</span> Days ago
+                                                </small>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <!-- NOTIFICATION-INFO END -->
+                                    
+                                    <!-- NOTIFICATION-INFO START -->
+                                    <div class="notification-info">
+                                        <a href="#">
+                                            <span class="notification-image">
+                                                <img src="assets/images/notifications/notification-1.svg" alt="notification-img">
+                                            </span>
+
+                                            <div class="notification-texts">
+                                                <p class="notification-text">
+                                                    Thank you for placing your order to Titan 
+                                                    Smart WatchCollection. Our customer 
+                                                    manager will contact you soon.
+                                                </p>
+
+                                                <small class="notification-date">
+                                                    <span class="notification-time">4</span> Days ago
+                                                </small>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <!-- NOTIFICATION-INFO END -->
+
+                                    <!-- NOTIFICATION-INFO START -->
+                                    <div class="notification-info">
+                                        <a href="#">
+                                            <span class="notification-image">
+                                                <img src="assets/images/notifications/notification-2.svg" alt="notification-img">
+                                            </span>
+
+                                            <div class="notification-texts">
+                                                <p class="notification-text">
+                                                    Thank you for placing your order to Titan 
+                                                    Smart WatchCollection. Our customer 
+                                                    manager will contact you soon.
+                                                </p>
+
+                                                <small class="notification-date">
+                                                    <span class="notification-time">4</span> Days ago
+                                                </small>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <!-- NOTIFICATION-INFO END -->
+                                </div>
+
+                                <div class="seeall">
+                                    <a href="#" class="seeall-link">See All Notifications</a>
+                                </div>
+                            </div>
+                            <!-- NOTIFICATION-LIST END -->
+                        </div>
+                        <!-- NOTIFICATION-BODY END -->
+                    </div>
+                    <!-- NOTIFICATION-DETAILS END -->
+                    
+                </div>
+                <!-- ALPHA-NOTIFICATION END -->
+
+                <!-- USER-DROPDOWN START -->
+                <div class="userdropdown">
+                    <!-- USER-DROPDOWN HEADER START -->
+                    <div class="userdropdown-header">
+                        <a href="profile.html" class="userlink">
+                            <div class="user-thumb">
+                                <img src="assets/images/user-thumbnails/user-1.png" alt="user-thumb">
+                            </div>
+
+                            <div class="user-info">
+                                <h5 class="usertitle">Super Admin</h5>
+                                <p class="usertext">Washington, DC, USA</p>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- USER-DROPDOWN HEADER END -->
+
+                    <!-- USER-DROPDOWN BODY START -->
+                    <div class="userdropdown-body">
+                        <ul class="dropdownlist">
+                            <li class="dropdownlist-item">
+                                <a href="edit-profile.html" class="dropdownlist-link">
+                                    <span class="icon">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14 7C14 5.897 13.103 5 12 5C10.897 5 10 5.897 10 7C10 8.103 10.897 9 12 9C13.103 9 14 8.103 14 7ZM16 7C16 9.206 14.206 11 12 11C9.794 11 8 9.206 8 7C8 4.794 9.794 3 12 3C14.206 3 16 4.794 16 7ZM5 20C5 16.14 8.141 13 12 13C15.859 13 19 16.14 19 20C19 20.552 18.553 21 18 21C17.447 21 17 20.552 17 20C17 17.243 14.757 15 12 15C9.243 15 7 17.243 7 20C7 20.552 6.553 21 6 21C5.447 21 5 20.552 5 20Z" fill="#343C44"/>
+                                        </svg>
+                                    </span>
+
+                                    <span class="text">Edit Profile</span>
+                                </a>
+                            </li>
+
+                            <li class="dropdownlist-item">
+                                <a href="my-activity.html" class="dropdownlist-link">
+                                    <span class="icon">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M20.9925 6.963C20.9905 6.891 20.9695 6.823 20.9505 6.754C20.9355 6.696 20.9285 6.637 20.9035 6.584C20.8805 6.532 20.8415 6.49 20.8075 6.442C20.7655 6.381 20.7275 6.32 20.6735 6.27C20.6645 6.261 20.6605 6.249 20.6505 6.241C20.6145 6.21 20.5705 6.199 20.5315 6.174C20.4715 6.135 20.4125 6.095 20.3445 6.069C20.2775 6.045 20.2115 6.039 20.1425 6.029C20.0945 6.022 20.0515 6 20.0005 6H15.0005C14.4475 6 14.0005 6.448 14.0005 7C14.0005 7.552 14.4475 8 15.0005 8H17.8265L13.7905 12.708L9.5145 10.143C9.0915 9.887 8.5475 9.981 8.2315 10.36L3.2315 16.36C2.8785 16.784 2.9355 17.415 3.3595 17.768C3.5475 17.924 3.7735 18 3.9995 18C4.2865 18 4.5705 17.878 4.7685 17.64L9.2205 12.298L13.4855 14.858C13.9045 15.109 14.4425 15.021 14.7595 14.651L19.0005 9.703V12C19.0005 12.552 19.4475 13 20.0005 13C20.5535 13 21.0005 12.552 21.0005 12V7C21.0005 6.987 20.9935 6.976 20.9925 6.963Z" fill="#343C44"/>
+                                        </svg>
+                                    </span>
+
+                                    <span class="text">My Activity</span>
+                                </a>
+                            </li>
+
+                            <li class="dropdownlist-item">
+                                <a href="login.html" class="dropdownlist-link">
+                                    <span class="icon">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M8 5C8 5.55 7.55 6 7 6H6V18H7C7.55 18 8 18.45 8 19C8 19.55 7.55 20 7 20H5C4.45 20 4 19.55 4 19V5C4 4.45 4.45 4 5 4H7C7.55 4 8 4.45 8 5ZM18.0039 7.4248L20.8179 11.4248C21.0679 11.7788 21.0599 12.2538 20.7999 12.5998L17.7999 16.5998C17.6039 16.8618 17.3029 16.9998 16.9989 16.9998C16.7909 16.9998 16.5799 16.9348 16.3999 16.7998C15.9579 16.4688 15.8689 15.8418 16.1999 15.4008L18.0009 12.9998H17.9999H9.9999C9.4479 12.9998 8.9999 12.5528 8.9999 11.9998C8.9999 11.4468 9.4479 10.9998 9.9999 10.9998H17.9999C18.0164 10.9998 18.0317 11.0044 18.0472 11.0089C18.0598 11.0127 18.0724 11.0165 18.0859 11.0178L16.3679 8.5748C16.0499 8.1238 16.1589 7.4998 16.6109 7.1818C17.0619 6.8628 17.6859 6.9728 18.0039 7.4248Z" fill="#343C44"/>
+                                        </svg>
+                                    </span>
+
+                                    <span class="text">Sign out</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- USER-DROPDOWN BODY END -->
+                </div>
+                <!-- USER-DROPDOWN END -->
+                
+                <!-- HAMBURGER START -->
+                <div class="hamburger">
+                    <button class="btn-hamburger" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileSidebar" aria-controls="mobileSidebar">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 71.54 71.54"><defs><style>.cls-1{fill:none;stroke:#343C44;stroke-miterlimit:10;}</style></defs><g id="Notes"><line class="cls-1" x1="20.19" y1="28.94" x2="54.19" y2="28.94"/><line class="cls-1" x1="20.19" y1="40.94" x2="54.19" y2="40.94"/><line class="cls-1" x1="20.19" y1="52.94" x2="54.19" y2="52.94"/></g></svg>
+                    </button>
+                </div>
+                <!-- HAMBURGER END -->
+
+                <!-- MOBILE MENU START -->
+                <aside class="mobilesidebar">
+                    <div class="offcanvas offcanvas-top" tabindex="-1" id="mobileSidebar" aria-labelledby="mobileSidebar">
+                        <!-- OFFCANVAS-HEADER START -->
+                        <div class="offcanvas-header">
+                            <!-- SITE-LOGO START -->
+                            <a href="index.html" class="logo">
+                                <img src="assets/images/logo/logo.svg" alt="alpha-logo">
+                            </a>
+                            <!-- SITE-LOGO END -->
+
+                            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z"/>
+                                    <path fill-rule="evenodd" d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <!-- OFFCANVAS-HEADER END -->
+
+                        <!-- OFFCANVAS-BODY START -->
+                        <div class="offcanvas-body">
+                            <!-- MOBILE DATE START -->
+                            <div class="date">
+                                <p class="date-text">28 October 2019</p>
+                            </div>
+                            <!-- MOBILE DATE END -->
+
+                            <!-- MOBILE LIST START -->
+                            <ul class="mobilelist">
+                                <li class="mobilelist-item">
+                                    <a href="index.html" class="mobilelist-link">Dashboard</a>
+                                </li>
+
+                                <li class="mobilelist-item">
+                                    <a href="add-user.html" class="mobilelist-link active">Add User</a>
+                                </li>
+
+                                <li class="mobilelist-item">
+                                    <a href="user-list.html" class="mobilelist-link">User List</a>
+                                </li>
+
+                                <li class="mobilelist-item">
+                                    <a href="add-driver.html" class="mobilelist-link">Add Driver</a>
+                                </li>
+
+                                <li class="mobilelist-item">
+                                    <a href="driver-list.html" class="mobilelist-link">Driver List</a>
+                                </li>
+
+                                <li class="mobilelist-item">
+                                    <a href="add-delivery.html" class="mobilelist-link">Add delivery</a>
+                                </li>
+                            </ul>
+                            <!-- MOBILE LIST END -->
+                        </div>
+                        <!-- OFFCANVAS-BODY END -->
+                    </div>
+                </aside>
+                <!-- MOBILE MENU END -->
+            </div>
+            <!-- HEADER-DROPDOWNS END -->
+        </div>
+        <!-- HEADER-TOP MENU END -->
+
+        <!-- HEADER-BOTTOM MENU START -->
+        <div class="header-bottom">
+            <!-- DESKTOP LIST START -->
+            <ul class="headerlist">
+                <li class="headerlist-item">
+                    <a href="index.html" class="headerlist-link">Dashboard</a>
+                </li>
+
+                <li class="headerlist-item">
+                    <a href="add-user.html" class="headerlist-link active">Add User</a>
+                </li>
+
+                <li class="headerlist-item">
+                    <a href="user-list.html" class="headerlist-link">User List</a>
+                </li>
+
+                <li class="headerlist-item">
+                    <a href="add-driver.html" class="headerlist-link">Add Driver</a>
+                </li>
+
+                <li class="headerlist-item">
+                    <a href="driver-list.html" class="headerlist-link">Driver List</a>
+                </li>
+
+                <li class="headerlist-item">
+                    <a href="add-delivery.html" class="headerlist-link">Add delivery</a>
+                </li>
+            </ul>
+            <!-- DESKTOP LIST END -->
+
+            <!-- DESKTOP DATE START -->
+            <div class="date">
+                <p class="date-text">28 October 2019</p>
+            </div>
+            <!-- DESKTOP DATE END -->
+        </div>
+        <!-- HEADER-BOTTOM MENU END -->
+    </header>
+    <!-- ALPHA-HEADER END -->
+
+    <!-- MAIN SECTION START -->
+    <main class="main">
+        <!-- ADD-USER START -->
+        <div class="add-user">
+            <!-- ADD-USER HEADER START -->
+            <div class="adduser-header">
+                <h2 class="add-title">Add User</h2>
+
+                <button class="btn-add" type="button">
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 10H10V12C10 12.55 9.55 13 9 13C8.45 13 8 12.55 8 12V10H6C5.45 10 5 9.55 5 9C5 8.45 5.45 8 6 8H8V6C8 5.45 8.45 5 9 5C9.55 5 10 5.45 10 6V8H12C12.55 8 13 8.45 13 9C13 9.55 12.55 10 12 10ZM15 0H3C1.346 0 0 1.346 0 3V15C0 16.654 1.346 18 3 18H15C16.654 18 18 16.654 18 15V3C18 1.346 16.654 0 15 0Z" fill="#343C44"/>
+                    </svg>
+                </button>
+            </div>
+            <!-- ADD-USER HEADER END -->
+
+            <!-- ADD-USER BODY START -->
+            <div class="adduser-body">
+                <!-- ADDUSER FORM START -->
+                <form class="adduserform dropzone" id="demo-upload">
+                    <!-- USER-INFO START -->
+                    <div class="userinfo">
+                        <div class="inputbox">
+                            <label for="firstname" class="inputlabel">First name <sup>*</sup></label>
+                            <input type="text" class="inputfield" id="firstname">
+                        </div>
+
+                        <div class="inputbox">
+                            <label for="lastname" class="inputlabel">Last name <sup>*</sup></label>
+                            <input type="text" class="inputfield" id="lastname">
+                        </div>
+
+                        <div class="inputbox">
+                            <label for="useremail" class="inputlabel">Email <sup>*</sup></label>
+                            <input type="email" class="inputfield" id="useremail">
+
+                            <button class="icon">
+                                <svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8 14C7.448 14 7 13.552 7 13C7 12.448 7.448 12 8 12C8.552 12 9 12.448 9 13C9 13.552 8.552 14 8 14ZM8 10C6.346 10 5 11.346 5 13C5 14.654 6.346 16 8 16C9.654 16 11 14.654 11 13C11 11.346 9.654 10 8 10ZM14 17C14 17.552 13.552 18 13 18H3C2.448 18 2 17.552 2 17V9C2 8.448 2.448 8 3 8H4H6H10H12H13C13.552 8 14 8.448 14 9V17ZM6 4.111C6 2.947 6.897 2 8 2C9.103 2 10 2.947 10 4.111V6H6V4.111ZM13 6H12V4.111C12 1.845 10.206 0 8 0C5.794 0 4 1.845 4 4.111V6H3C1.346 6 0 7.346 0 9V17C0 18.654 1.346 20 3 20H13C14.654 20 16 18.654 16 17V9C16 7.346 14.654 6 13 6Z" fill="#343C44"/>
+                                </svg>
+                            </button>
+                        </div>
+
+                        <div class="inputbox">
+                            <label for="userphone" class="inputlabel">Phone <sup>*</sup></label>
+                            <input type="tel" class="inputfield" id="userphone">
+
+                            <button class="icon">
+                                <svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8 14C7.448 14 7 13.552 7 13C7 12.448 7.448 12 8 12C8.552 12 9 12.448 9 13C9 13.552 8.552 14 8 14ZM8 10C6.346 10 5 11.346 5 13C5 14.654 6.346 16 8 16C9.654 16 11 14.654 11 13C11 11.346 9.654 10 8 10ZM14 17C14 17.552 13.552 18 13 18H3C2.448 18 2 17.552 2 17V9C2 8.448 2.448 8 3 8H4H6H10H12H13C13.552 8 14 8.448 14 9V17ZM6 4.111C6 2.947 6.897 2 8 2C9.103 2 10 2.947 10 4.111V6H6V4.111ZM13 6H12V4.111C12 1.845 10.206 0 8 0C5.794 0 4 1.845 4 4.111V6H3C1.346 6 0 7.346 0 9V17C0 18.654 1.346 20 3 20H13C14.654 20 16 18.654 16 17V9C16 7.346 14.654 6 13 6Z" fill="#343C44"/>
+                                </svg>
+                            </button>
+                        </div>
+
+                        <div class="inputbox">
+                            <label for="useraddress" class="inputlabel">Address</label>
+                            <textarea class="inputfield" id="useraddress" rows="6"></textarea>
+                        </div>
+                    </div>
+                    <!-- USER-INFO END -->
+
+                    <!-- USER-INFO START -->
+                    <div class="userinfo">
+                        <div class="inputbox">
+                            <label for="userpass" class="inputlabel">Upload Picture</label>
+
+                            <div class="">
+                                <input type="file" name="file" class="inputfield">
+                                <div class="dz-message needsclick">
+                                    Drop files here or click to upload
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="inputbox">
+                            <label for="userpass" class="inputlabel">Enter Password <sup>*</sup></label>
+                            <input type="password" class="inputfield" id="userpass">
+
+                            <button class="icon">
+                                <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M17.407 14.9932L18.707 16.2932C19.098 16.6842 19.098 17.3162 18.707 17.7073C18.512 17.9023 18.256 18.0002 18 18.0002C17.744 18.0002 17.488 17.9023 17.293 17.7073L14.586 15.0002L14 14.4143L12.655 13.0693L12.586 13.0002L10.0837 10.4979C10.056 10.4995 10.0281 10.5002 10 10.5002C9.173 10.5002 8.5 9.82725 8.5 9.00025C8.5 8.97217 8.50078 8.94426 8.50231 8.91656L5.283 5.69725L3.532 3.94625L1.293 1.70725C0.902 1.31625 0.902 0.68425 1.293 0.29325C1.684 -0.09775 2.316 -0.09775 2.707 0.29325L4.42 2.00625L5.885 3.47125L9.91631 7.50256C9.94401 7.50103 9.97192 7.50025 10 7.50025C10.827 7.50025 11.5 8.17325 11.5 9.00025C11.5 9.02833 11.4992 9.05624 11.4977 9.08394L15.414 13.0002L17.407 14.9932ZM6.5928 2.76445L9.3898 5.56145C9.5888 5.52645 9.7908 5.50045 9.9998 5.50045C11.9298 5.50045 13.4998 7.07045 13.4998 9.00045C13.4998 9.20945 13.4738 9.41145 13.4388 9.61045L16.1208 12.2934L16.9548 13.1274C18.4768 11.7395 19.4528 10.2204 19.8678 9.49745C20.0438 9.18945 20.0438 8.81045 19.8678 8.50245C19.2298 7.39045 15.7058 1.81645 9.7298 2.00345C8.5458 2.03445 7.4738 2.28945 6.5018 2.67445L6.5928 2.76445ZM11.948 13.7774L13.293 15.1214L13.498 15.3264C12.526 15.7114 11.455 15.9664 10.271 15.9964C10.189 15.9994 10.106 16.0004 10.025 16.0004C4.162 16.0004 0.762 10.5954 0.132 9.49735C-0.044 9.18935 -0.044 8.81035 0.132 8.50235C0.547 7.78035 1.523 6.26135 3.045 4.87335L4.576 6.40535L6.562 8.39035C6.526 8.58935 6.5 8.79135 6.5 9.00035C6.5 10.9304 8.07 12.5004 10 12.5004C10.209 12.5004 10.411 12.4743 10.61 12.4384L11.879 13.7073L11.948 13.7774Z" fill="#343C44"/>
+                                </svg>
+                            </button>
+                        </div>
+
+                        <div class="inputbox">
+                            <label for="userconfirmpass" class="inputlabel">Confirm Password <sup>*</sup></label>
+                            <input type="password" class="inputfield" id="userconfirmpass">
+
+                            <button class="icon">
+                                <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M17.407 14.9932L18.707 16.2932C19.098 16.6842 19.098 17.3162 18.707 17.7073C18.512 17.9023 18.256 18.0002 18 18.0002C17.744 18.0002 17.488 17.9023 17.293 17.7073L14.586 15.0002L14 14.4143L12.655 13.0693L12.586 13.0002L10.0837 10.4979C10.056 10.4995 10.0281 10.5002 10 10.5002C9.173 10.5002 8.5 9.82725 8.5 9.00025C8.5 8.97217 8.50078 8.94426 8.50231 8.91656L5.283 5.69725L3.532 3.94625L1.293 1.70725C0.902 1.31625 0.902 0.68425 1.293 0.29325C1.684 -0.09775 2.316 -0.09775 2.707 0.29325L4.42 2.00625L5.885 3.47125L9.91631 7.50256C9.94401 7.50103 9.97192 7.50025 10 7.50025C10.827 7.50025 11.5 8.17325 11.5 9.00025C11.5 9.02833 11.4992 9.05624 11.4977 9.08394L15.414 13.0002L17.407 14.9932ZM6.5928 2.76445L9.3898 5.56145C9.5888 5.52645 9.7908 5.50045 9.9998 5.50045C11.9298 5.50045 13.4998 7.07045 13.4998 9.00045C13.4998 9.20945 13.4738 9.41145 13.4388 9.61045L16.1208 12.2934L16.9548 13.1274C18.4768 11.7395 19.4528 10.2204 19.8678 9.49745C20.0438 9.18945 20.0438 8.81045 19.8678 8.50245C19.2298 7.39045 15.7058 1.81645 9.7298 2.00345C8.5458 2.03445 7.4738 2.28945 6.5018 2.67445L6.5928 2.76445ZM11.948 13.7774L13.293 15.1214L13.498 15.3264C12.526 15.7114 11.455 15.9664 10.271 15.9964C10.189 15.9994 10.106 16.0004 10.025 16.0004C4.162 16.0004 0.762 10.5954 0.132 9.49735C-0.044 9.18935 -0.044 8.81035 0.132 8.50235C0.547 7.78035 1.523 6.26135 3.045 4.87335L4.576 6.40535L6.562 8.39035C6.526 8.58935 6.5 8.79135 6.5 9.00035C6.5 10.9304 8.07 12.5004 10 12.5004C10.209 12.5004 10.411 12.4743 10.61 12.4384L11.879 13.7073L11.948 13.7774Z" fill="#343C44"/>
+                                </svg>
+                            </button>
+                        </div>
+
+                        <div class="submitbox">
+                            <button class="btn-save" type="button">Save</button>
+                        </div>
+                    </div>
+                    <!-- USER-INFO END -->
+                </form>
+                <!-- ADDUSER FORM END -->
+            </div>
+            <!-- ADD-USER BODY END -->
+        </div>
+        <!-- ADD-USER END -->
+    </main>
+    <!-- MAIN SECTION END -->
+
+    <!-- ALPHA-FOOTER START -->
+    <footer class="footer">
+        <p class="copyright-text">
+            &copy; 2022 All rights reserved &mdash; alpha.com
+        </p>
+    </footer>
+    <!-- ALPHA-FOOTER END -->
+
+    <!-- BOOTSTRAP JS -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!-- DROPZONE JS -->
+    <script src="assets/js/dropzone.min.js"></script>
+    <!-- DRAG-DROP JS -->
+    <script src="assets/js/dragdrop.js"></script>
 </body>
 </html>

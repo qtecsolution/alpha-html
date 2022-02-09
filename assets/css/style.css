@@ -625,6 +625,10 @@ button {
 /**=======================================================**
                         HEADER SECTION START
 **=======================================================**/
+.header {
+  background: #ffffff;
+}
+
 .header-top {
   padding: 0rem 5rem;
   display: -webkit-box;
@@ -2159,6 +2163,71 @@ button {
     font-weight: normal;
     line-height: 1.75;
   }
+}
+
+/**=======================================================**
+                        ADD-USER SECTION START
+**=======================================================**/
+.main {
+  padding: 1.5rem 2.375rem 8.75rem;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .main {
+    padding: 1.25rem 1.25rem 5rem;
+  }
+}
+
+.main .add-user {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+}
+
+.main .add-user .adduser-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  align-items: center;
+}
+
+.main .add-user .adduser-header .add-title {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.32;
+  color: #333333;
+}
+
+.main .add-user .adduser-header .btn-add {
+  background: #E5E5E5;
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
 }
 
 /**=====================================================

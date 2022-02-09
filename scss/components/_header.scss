@@ -3,6 +3,8 @@
 **=======================================================**/
 
 .header {
+    background: $white;
+
     &-top {
         padding: length(0) length(80);
         @include flex-between;
