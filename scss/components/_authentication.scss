@@ -307,6 +307,7 @@
         @include breakpoint(tablet991) {
             @include w100;
             padding: length(48);
+            display: none;
         }
 
         .auth-thumbnail {

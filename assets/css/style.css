@@ -1238,6 +1238,7 @@ button {
   .alpha-authentication .authenticationinfo {
     width: 100%;
     padding: 3rem;
+    display: none;
   }
 }
 
