@@ -2,5 +2,14 @@
                 FOOTER SECTION START
 =====================================================**/
 .footer {
-    
+    height: length(48);
+    @include flex-center;
+    text-align: center;
+    background: $textPrimary;
+
+    .copyright-text {
+        @include font-face($montserrat, style('normal'), size(14), weight('medium'), line-height(20, 14));
+        color: $white;
+        letter-spacing: length(0.25);
+    }
 }

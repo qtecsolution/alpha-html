@@ -22,21 +22,17 @@
     &-header {
         padding: length(24);
 
-        // .brandlogo {
-        //     @include flex-center;
-        //     width: length(160);
-        //     height: length(80);
-        //     overflow: hidden;
+        .logo {
+            width: length(160);
+            height: length(40);
+            @include flex-center;
+            overflow: hidden;
 
-        //     img {
-        //         max-width: 100%;
-        //         object-fit: contain;
-
-        //         @include breakpoint(mobile768) {
-        //             object-fit: cover;
-        //         }
-        //     }
-        // }
+            img {
+                @include wh100;
+                object-fit: contain;
+            }
+        }
 
         .btn-close {
             @include square(length(36));
@@ -46,6 +42,9 @@
             @include flex-center;
             opacity: 1;
 
+            svg {
+                @include transitiontransform;
+            }
 
             &:focus {
                 box-shadow: none;
@@ -53,14 +52,61 @@
             }
 
             @include hover {
-                
+                svg {
+                    @include transform(rotate(90deg));
+
+                    path {
+                        stroke: $textDanger;
+                    }
+                }
             }
         }
     }
 
     &-body {
+        padding: length(0) length(24) length(24);
+        @include flex-column;
+        gap: length(14);
 
-        
+        .date {
+            margin-left: auto;
+
+            &-text {
+                @include font-face($montserrat, style('normal'), size(12), weight('normal'), line-height(16, 12));
+                color: $textWelcome;
+                letter-spacing: length(0.4);
+            }
+        }
+
+        .mobilelist {
+            @include list-vertical;
+            gap: length(14);
+
+            &-link {
+                @include font-face($montserrat, style('normal'), size(14), weight('normal'), line-height(24, 14));
+                color: $textWelcome;
+                letter-spacing: length(0.25);
+                @include transitions;
+
+                &:hover:not(.active) {
+                    font-weight: bold;
+                }
+
+                &.active {
+                    font-weight: bold;
+                }
+            }
+        }
+
+        .date {
+            margin-left: auto;
+
+            &-text {
+                @include font-face($montserrat, style('normal'), size(12), weight('normal'), line-height(16, 12));
+                color: $textWelcome;
+                letter-spacing: length(0.4);
+            }
+        }
 
         &::-webkit-scrollbar {
             background: transparent;
@@ -68,9 +114,7 @@
         }
 
         &::-webkit-scrollbar-thumb {
-            // background: $primary;
             @include radius(8);
         }
-
     }
 }

@@ -30,13 +30,26 @@ $textSlogan: #4D4D4D;
 $textPrimary: #25A8E0;
 $textDanger: #FF5756;
 $textHeading: #343C44;
-
+$textGray: #9C9C9C;
+$primaryBlue: #007AFF;
+$notifyHeaderBg: #ebebeb;
+$notifyBg: #FBFBFB;
+$border-1: hsl(0, 0%, 69%); //#B0B0B0
+$border-2: hsl(216, 6%, 15%); //#242629
+$input-border: hsl(255, 7%, 88%); //#E0DFE3
+$prime-express-bg: hsl(220, 23%, 97%); //#F7F8FA
+$dropdownBorder: #D6E4EC;
+$headerBottomBg: #F5F5F5;
 
 // SHADOWS
 $shadow-1: rgba(162, 162, 162, 0.25);
 $banner: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 67.71%);
-
 $overlayBg: linear-gradient(0deg, $black 0%, rgba($black, 0) 86.04%);
-
-
 $box-shadow-1: 0rem .25rem .25rem $shadow-1;
+
+$shade-1: rgba(117, 131, 142, 0.04);
+$shade-2: rgba(52, 60, 68, 0.12);
+
+
+$dropdownshadow: 0rem .125rem .5rem $shade-1,
+0rem 1rem 1.5rem $shade-2;

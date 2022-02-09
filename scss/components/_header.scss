@@ -3,7 +3,414 @@
 **=======================================================**/
 
 .header {
-    
+    &-top {
+        padding: length(0) length(80);
+        @include flex-between;
+
+        @include breakpoint(tablet991) {
+            padding: length(0) length(40);
+        }
+
+        @include breakpoint(phone768) {
+            padding: length(0) length(20);
+        }
+
+        .logo {
+            width: length(160);
+            height: length(88);
+            @include flex-center;
+            overflow: hidden;
+
+            img {
+                @include wh100;
+                object-fit: contain;
+            }
+        }
+
+        .header-dropdowns {
+            @include flex-end;
+            align-items: center;
+            gap: length(16);
+
+            .notification {
+                position: relative;
+                padding: length(24) length(16);
+                @include flex-center;
+
+                @include breakpoint(phone500) {
+                    padding: length(8);
+                }
+
+                .notificationlink {
+                    position: relative;
+
+                    .notifyicon {
+                        @include square(length(24));
+                        @include flex-center;
+                        overflow: hidden;
+                    }
+
+                    .notifystatus {
+                        @include square(length(8));
+                        @include circle;
+                        background: $notifyHeaderBg;
+                        position: absolute;
+                        top: length(-8);
+                        right: length(-8);
+
+                        &.active {
+                            background: $primaryBlue;
+                        }
+                    }
+                }
+
+                &-details {
+                    position: absolute;
+                    top: 100%;
+                    right: 0;
+                    width: 100%;
+                    max-width: length(400);
+                    min-width: length(320);
+                    @include radius(8);
+                    overflow: hidden;
+                    background: $notifyBg;
+                    box-shadow: $dropdownshadow;
+                    @extend %animation;
+                    @extend %slideUpIn;
+
+                    display: none;
+
+                    @include breakpoint(phone480) {
+                        right: length(-94);
+                    }
+
+                    @include breakpoint(mobile400) {
+                        right: length(-136);
+                    }
+                }
+
+                &-header {
+                    padding: length(16) length(20);
+                    background: $notifyHeaderBg;
+
+                    .notification-title {
+                        @include font-face($montserrat, style('normal'), size(18), weight('medium'), line-height(36, 18));
+                        color: $textWelcome;
+                    }
+                }
+
+                &-body {
+                    overflow: hidden;
+
+                    .empty-notification {
+                        background: whitesmoke;
+                        @include flex-center;
+                        padding: length(48);
+                    }
+
+                    .notificationbox {
+                        @include flex-column;
+
+                        .notification-list {
+                            max-height: size(373);
+                            overflow-x: hidden;
+                            overflow-y: scroll;
+
+                            .notification-info {
+                                @include border-single(bottom, solid, 0.5, $input-border);
+                                padding: size(16) size(20);
+                                background: $prime-express-bg;
+                                @include transitions;
+
+                                a {
+                                    display: flex;
+                                    gap: length(16);
+
+                                    .notification-image {
+                                        overflow: hidden;
+                                        @include square(length(60));
+                                        @include circle;
+
+                                        img {
+                                            @include wh100;
+                                            @include circle;
+                                            object-fit: cover;
+                                        }
+                                    }
+
+                                    .notification-texts {
+                                        width: calc(100% - 4.75rem);
+
+                                        .notification-text {
+                                            @include font-face($montserrat, style('normal'), size(12), weight('normal'), line-height(20, 12));
+                                            color: $border-2;
+                                        }
+
+                                        .notification-date {
+                                            @include font-face($montserrat, style('normal'), size(12), weight('normal'), line-height(20, 12));
+                                            color: $border-1;
+                                        }
+                                    }
+                                }
+
+                                &:hover {
+                                    background: $white;
+                                }
+                            }
+
+                            &::-webkit-scrollbar-track {
+                                @include radius(10);
+                            }
+
+                            &::-webkit-scrollbar {
+                                width: length(8);
+                                background: $input-border;
+                            }
+
+                            &::-webkit-scrollbar-thumb {
+                                @include radius(10);
+                                background: $border-1;
+                            }
+                        }
+
+                        .seeall {
+                            background: $white;
+                            padding: length(16) length(20);
+                            @include flex-center;
+                            text-align: center;
+
+                            .seeall-link {
+                                @include font-face($montserrat, style('normal'), size(12), weight('medium'), line-height(20, 12));
+                                color: $border-2;
+                                @include transitions;
+
+                                @include hover {
+                                    color: $textPrimary;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                @include hover {
+                    .notification-details {
+                        display: block;
+                    }
+                }
+            }
+
+            .userdropdown {
+                position: relative;
+                padding: length(24) length(16);
+                @include flex-center;
+
+                @include breakpoint(phone500) {
+                    padding: length(8);
+                }
+
+                &-header {
+                    .userlink {
+                        @include flex-center-vert;
+                        gap: length(16);
+                        position: relative;
+
+                        .user-thumb {
+                            @include square(length(40));
+                            @include flex-center;
+                            overflow: hidden;
+                        }
+
+                        .user-info {
+                            .usertitle {
+                                @include font-face($montserrat, style('normal'), size(16), weight('semibold'), line-height(24, 16));
+                                color: $primary;
+                                letter-spacing: length(0.44);
+                                @include transitions;
+                            }
+
+                            .usertext {
+                                @include font-face($montserrat, style('normal'), size(12), weight('semibold'), line-height(16, 12));
+                                color: $textGray;
+                                letter-spacing: length(0.4);
+                            }
+
+                            @include breakpoint(phone768) {
+                                display: none;
+                            }
+                        }
+
+                        &::after {
+                            position: absolute;
+                            top: 50%;
+                            @include transform(translateY(-50%));
+                            right: length(-20);
+                            content: url("data:image/svg+xml,%3Csvg width='14' height='7' viewBox='0 0 14 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M6.99991 6.9995C6.77191 6.9995 6.54491 6.9225 6.35991 6.7675L0.359909 1.7675C-0.0640909 1.4145 -0.122091 0.783495 0.231909 0.359495C0.584909 -0.0645046 1.21491 -0.121505 1.63991 0.231495L7.01091 4.7075L12.3729 0.392495C12.8029 0.0464955 13.4329 0.114495 13.7789 0.544495C14.1249 0.974495 14.0569 1.6035 13.6269 1.9505L7.62691 6.7785C7.44391 6.9255 7.22191 6.9995 6.99991 6.9995Z' fill='%23343C44'/%3E%3C/svg%3E%0A");
+                            @include transitiontransform;
+
+                            @include breakpoint(phone768) {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+
+                &-body {
+                    position: absolute;
+                    top: 100%;
+                    right: 0;
+                    width: 100%;
+                    max-width: length(400);
+                    min-width: length(300);
+                    @include radius(8);
+                    overflow: hidden;
+                    background: $notifyBg;
+                    box-shadow: $dropdownshadow;
+                    @extend %animation;
+                    @extend %slideUpIn;
+                    display: none;
+
+                    @include breakpoint(phone414) {
+                        right: length(-60);
+                    }
+
+                    @include breakpoint(mobile400) {
+                        // right: length(-136);
+                    }
+
+                    .dropdownlist {
+                        @include list-vertical;
+
+                        &-item {
+                            &:last-of-type {
+                                .dropdownlist-link {
+                                    border-bottom: 0;
+                                }
+                            }
+                        }
+
+                        &-link {
+                            padding: length(14) length(24);
+                            @include flex-center-vert;
+                            gap: length(24);
+                            @include border-single(bottom, solid, 1, $dropdownBorder);
+
+                            .icon {
+                                svg {
+                                    path {
+                                        @include transitions;
+                                    }
+                                }
+                            }
+
+                            .text {
+                                @include font-face($montserrat, style('normal'), size(14), weight('normal'), line-height(20, 14));
+                                color: $textWelcome;
+                                letter-spacing: length(0.25);
+                                @include transitions;
+                            }
+
+                            @include hover {
+                                .icon {
+                                    svg {
+                                        path {
+                                            fill: $textPrimary;
+                                        }
+                                    }
+                                }
+
+                                .text {
+                                    color: $textPrimary;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                @include hover {
+                    .userdropdown-body {
+                        display: block;
+                    }
+
+                    .userdropdown-header {
+                        .userlink {
+                            .user-info {
+                                .usertitle {
+                                    color: $textPrimary;
+                                }
+
+                                .usertext {
+                                    color: $primary;
+                                }
+                            }
+
+                            &::after {
+                                position: absolute;
+                                top: 50%;
+                                @include transform(translateY(-50%) rotate(180deg));
+                                content: url("data:image/svg+xml,%3Csvg width='14' height='7' viewBox='0 0 14 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M6.99991 6.9995C6.77191 6.9995 6.54491 6.9225 6.35991 6.7675L0.359909 1.7675C-0.0640909 1.4145 -0.122091 0.783495 0.231909 0.359495C0.584909 -0.0645046 1.21491 -0.121505 1.63991 0.231495L7.01091 4.7075L12.3729 0.392495C12.8029 0.0464955 13.4329 0.114495 13.7789 0.544495C14.1249 0.974495 14.0569 1.6035 13.6269 1.9505L7.62691 6.7785C7.44391 6.9255 7.22191 6.9995 6.99991 6.9995Z' fill='%23343C44'/%3E%3C/svg%3E%0A");
+                            }
+                        }
+                    }
+                }
+            }
+
+            .hamburger {
+                width: length(48);
+                display: none;
+
+                @include breakpoint(tablet991) {
+                    display: block;
+                }
+
+                .btn-hamburger {
+                    width: length(48);
+                    @include flex-center;
+                    @include transparent-button;
+                }
+            }
+        }
+    }
+
+    &-bottom {
+        @include flex-center;
+        padding: length(20);
+        background: $headerBottomBg;
+
+        @include breakpoint(tablet991) {
+            display: none;
+        }
+
+        .headerlist {
+            @include list-horizontal;
+            gap: length(48);
+            margin-left: auto;
+
+            &-link {
+                @include font-face($montserrat, style('normal'), size(14), weight('normal'), line-height(24, 14));
+                color: $textWelcome;
+                letter-spacing: length(0.25);
+                @include transitions;
+
+                &:hover:not(.active) {
+                    font-weight: bold;
+                }
+
+                &.active {
+                    font-weight: bold;
+                }
+            }
+        }
+
+        .date {
+            margin-left: auto;
+
+            &-text {
+                @include font-face($montserrat, style('normal'), size(12), weight('normal'), line-height(16, 12));
+                color: $textWelcome;
+                letter-spacing: length(0.4);
+            }
+        }
+    }
 }
 
 /**=======================================================**
