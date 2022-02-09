@@ -29,6 +29,41 @@
                 overflow: hidden;
             }
         }
+
+        .adduser-body {
+            .dz-message {
+                display: none;
+            }
+
+            .dropzone {
+                position: relative;
+                background: transparent;
+                border: none;
+
+                .dropinfo {
+                    @include position-center;
+                    z-index: -1;
+                    @include flex-center-column;
+                    gap: length(16);
+
+                    .dropicon {
+                        @include square(length(74));
+                        @include flex-center;
+                        overflow: hidden;
+
+                        img {
+                            @include wh100;
+                            object-fit: contain;
+                        }
+                    }
+
+                    .droptext {
+                        @include font-face($montserrat, style('normal'), size(12), weight('normal'), line-height(16, 12));
+                        color: $dropzoneText;
+                    }
+                }
+            }
+        }
     }
 
 }

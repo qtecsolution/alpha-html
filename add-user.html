@@ -397,7 +397,7 @@
             <!-- ADD-USER BODY START -->
             <div class="adduser-body">
                 <!-- ADDUSER FORM START -->
-                <form class="adduserform dropzone" id="demo-upload">
+                <form class="adduserform" id="demo-upload">
                     <!-- USER-INFO START -->
                     <div class="userinfo">
                         <div class="inputbox">
@@ -444,10 +444,17 @@
                         <div class="inputbox">
                             <label for="userpass" class="inputlabel">Upload Picture</label>
 
-                            <div class="">
-                                <input type="file" name="file" class="inputfield">
-                                <div class="dz-message needsclick">
-                                    Drop files here or click to upload
+                            <div class="dropzone">
+                                <input type="file" name="file" class="inputfield" hidden>
+                                
+                                <div class="dropinfo">
+                                    <div class="dropicon">
+                                        <img src="assets/images/pages/icons/add-delivery.svg" alt="file-icon">
+                                    </div>
+                                    
+                                    <p class="droptext">
+                                        Drag and drop choose file to upload your files.
+                                    </p>
                                 </div>
                             </div>
                         </div>
