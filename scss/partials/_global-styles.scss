@@ -125,7 +125,7 @@ html {
 }
 
 body {
-	@include font-face($encodeSans, style('normal'), size(14), weight('normal'), line-height(24, 14));
+    @include font-face($encodeSans, style('normal'), size(14), weight('normal'), line-height(24, 14));
     margin: 0;
     padding: 0;
     overflow-x: hidden;
@@ -190,5 +190,9 @@ input[type="date"]:valid::before {
 }
 
 select {
+    cursor: pointer;
+}
+
+button {
     cursor: pointer;
 }
