@@ -51,7 +51,10 @@ $box-shadow-1: 0rem .25rem .25rem $shadow-1;
 
 $shade-1: rgba(117, 131, 142, 0.04);
 $shade-2: rgba(52, 60, 68, 0.12);
-
+$shade-3: rgba(0, 0, 0, 0.12);
 
 $dropdownshadow: 0rem .125rem .5rem $shade-1,
 0rem 1rem 1.5rem $shade-2;
+
+$inputshadow: .25rem 0rem .25rem $shade-3,
+0rem .25rem .25rem $shade-3;

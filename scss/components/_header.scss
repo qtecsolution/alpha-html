@@ -216,10 +216,22 @@
                         gap: length(16);
                         position: relative;
 
+                        @include breakpoint(phone768) {
+                            gap: length(8);
+                        }
+
                         .user-thumb {
                             @include square(length(40));
                             @include flex-center;
                             overflow: hidden;
+
+                            @include breakpoint(phone768) {
+                                @include square(length(34));
+                            }
+
+                            img {
+                                @include wh100;
+                            }
                         }
 
                         .user-info {
@@ -357,7 +369,7 @@
             }
 
             .hamburger {
-                width: length(48);
+                width: length(36);
                 display: none;
 
                 @include breakpoint(tablet991) {
@@ -365,7 +377,7 @@
                 }
 
                 .btn-hamburger {
-                    width: length(48);
+                    width: length(36);
                     @include flex-center;
                     @include transparent-button;
                 }

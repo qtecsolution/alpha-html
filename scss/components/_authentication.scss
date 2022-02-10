@@ -246,7 +246,7 @@
                             @include transitions;
 
                             @include hover {
-                                background: darken($textPrimary, 15%);
+                                @include setBgColor(darken($textPrimary, 15%), rgba($white, 0.8));
                             }
                         }
                     }
