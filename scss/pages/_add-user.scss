@@ -2,9 +2,13 @@
                         ADD-USER SECTION START
 **=======================================================**/
 .main {
-    padding: length(24) length(38) length(140);
+    padding: length(24) length(80) length(140);
 
     @include breakpoint(tablet991) {
+        padding: length(20) length(40) length(80);
+    }
+
+    @include breakpoint(phone768) {
         padding: length(20) length(20) length(80);
     }
 
