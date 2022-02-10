@@ -8,6 +8,10 @@
         padding: length(20) length(40) length(80);
     }
 
+    @include breakpoint(phone768) {
+        padding: length(20) length(20) length(80);
+    }
+
     &-content {
         @include flex-column;
         gap: length(64);
@@ -84,6 +88,97 @@
                 @include breakpoint(phone575) {
                     @include w100;
                     justify-content: space-between;
+                }
+            }
+        }
+    }
+}
+
+/**=======================================================**
+                    TABLE-PAGINATIONS START
+**=======================================================**/
+.tablepaginations {
+    padding: length(24) length(80) length(80);
+
+    @include breakpoint(tablet991) {
+        padding: length(20) length(40) length(60);
+    }
+
+    @include breakpoint(phone768) {
+        padding: length(20) length(20) length(40);
+    }
+
+    .paginationcontent {
+        @include flex-end;
+        gap: length(48);
+
+        @include breakpoint(phone414) {
+            gap: length(8);
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .pages {
+            @include flex-center-vert;
+
+            label {
+                @include font-face($montserrat, style('normal'), size(14), weight('normal'), line-height(20, 14));
+                color: $paginationLabelText;
+                letter-spacing: length(0.3);
+            }
+
+            select {
+                min-width: length(48);
+                background: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.98351 4.5H9.01398C9.43117 4.5 9.63976 5.00391 9.34445 5.29922L6.33039 8.31562C6.14757 8.49844 5.84992 8.49844 5.66711 8.31562L2.65304 5.29922C2.35773 5.00391 2.56632 4.5 2.98351 4.5Z' fill='%239FA2B4'/%3E%3C/svg%3E%0A") no-repeat right;
+                -moz-appearance: none;
+                appearance: none;
+                @include font-face($montserrat, style('normal'), size(14), weight('normal'), line-height(14, 14));
+                color: $paginationNumberText;
+                @include flex-center;
+                text-align: center;
+            }
+        }
+
+        .pagesresult {
+            @include flex-center-vert;
+            gap: length(24);
+
+            @include breakpoint(phone414) {
+                gap: length(20);
+            }
+
+            .resultbox {
+                .textresult {
+                    @include font-face($montserrat, style('normal'), size(14), weight('normal'), line-height(20, 14));
+                    color: $paginationLabelText;
+                    letter-spacing: length(0.3);
+                }
+            }
+
+            .resultactions {
+                @include flex-center-vert;
+                gap: length(12);
+
+                .btn-prev,
+                .btn-next {
+                    @include square(length(24));
+                    @include flex-center;
+                    overflow: hidden;
+                    @include transparent-button;
+
+                    svg {
+                        path {
+                            @include transitions;
+                        }
+                    }
+
+                    @include hover {
+                        svg {
+                            path {
+                                stroke: $primary;
+                            }
+                        }
+                    }
                 }
             }
         }

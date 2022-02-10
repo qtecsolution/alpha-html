@@ -3,15 +3,14 @@
 .modal {
     &-content {
         @include radius(0);
-        overflow: hidden;
     }
 
     &-header {
-        border-bottom: length(0);
-        padding: length(32);
+        padding: length(40);
+        border: none;
 
         @include breakpoint(phone575) {
-            padding: length(16);
+            padding: length(20);
         }
 
         .btn-close {
@@ -31,12 +30,22 @@
 
             @include hover {
                 @include transform(rotate(90deg));
+
+                svg {
+                    path {
+                        fill: $textDanger;
+                    }
+                }
             }
         }
     }
 
     &-body {
-        
+        padding: length(0) length(40) length(40);
+
+        @include breakpoint(phone575) {
+            padding: length(0) length(20) length(20);
+        }
     }
 }
 

@@ -1,63 +1,179 @@
+/**=======================================================**
+                USER-LIST TABLE(DESKTOP) START
+**=======================================================**/
 .desktoptable {
+    @include breakpoint(tablet991) {
+        display: none;
+    }
+
     &-header {
         @include flex-center-between;
         background: $headerBottomBg;
         box-shadow: $tableshadow;
-        padding: length(16);
+        padding: length(8);
 
         .serial {
+            flex: 5;
+            text-align: center;
+
             h4 {
                 @include font-face($montserrat, style('normal'), size(14), weight('normal'), line-height(20, 14));
                 color: $primary;
                 letter-spacing: length(0.25);
+
+                @include breakpoint(desktop1169) {
+                    @include font-face($montserrat, style('normal'), size(12), weight('normal'), line-height(16, 12));
+                }
             }
         }
 
-        .image {
-            h4 {
-                @include font-face($montserrat, style('normal'), size(14), weight('normal'), line-height(20, 14));
-                color: $primary;
-                letter-spacing: length(0.25);
+        .tablerow {
+            padding: length(8) length(0);
+            flex: 100;
+            @include flex-center-between;
+            text-align: center;
+
+            .tablecol {
+                width: calc(100% / 6);
+                @include flex-center;
+
+                h4 {
+                    @include font-face($montserrat, style('normal'), size(14), weight('normal'), line-height(20, 14));
+                    color: $primary;
+                    letter-spacing: length(0.25);
+
+                    @include breakpoint(desktop1169) {
+                        @include font-face($montserrat, style('normal'), size(12), weight('normal'), line-height(16, 12));
+                    }
+                }
             }
         }
 
-        .name {
-            h4 {
-                @include font-face($montserrat, style('normal'), size(14), weight('normal'), line-height(20, 14));
-                color: $primary;
-                letter-spacing: length(0.25);
+        .empty {
+            flex: 10;
+        }
+    }
+
+    &-body {
+        .tablerow {
+            @include flex-center-between;
+
+            .serial {
+                flex: 5;
+                text-align: center;
+
+                h4 {
+                    @include font-face($montserrat, style('normal'), size(12), weight('normal'), line-height(14, 12));
+                    color: $black;
+                }
+            }
+
+            .tableinfo {
+                flex: 100;
+                @include flex-center-between;
+                background: $white;
+                box-shadow: $rowshadow;
+                cursor: pointer;
+                padding: length(8) length(0);
+
+                @include hover {
+                    background: $tableHoverBg;
+                }
+
+                .tablecol {
+                    width: calc(100% / 6);
+                    @include flex-center;
+
+                    h4 {
+                        text-align: center;
+                        @include font-face($encodeSans, style('normal'), size(14), weight('normal'), line-height(20, 14));
+                        cursor: text;
+
+                        @include breakpoint(desktop1169) {
+                            @include font-face($montserrat, style('normal'), size(12), weight('normal'), line-height(16, 12));
+                        }
+                    }
+
+                    .image-box {
+                        @include square(length(50));
+                        @include flex-center;
+                        @include circle;
+                        overflow: hidden;
+
+                        img {
+                            @include wh100;
+                            object-fit: contain;
+                        }
+                    }
+                }
+            }
+
+            .edit-delete {
+                flex: 10;
+                @include flex-center;
+                gap: length(10);
             }
         }
+    }
+}
 
-        .location {
-            h4 {
-                @include font-face($montserrat, style('normal'), size(14), weight('normal'), line-height(20, 14));
-                color: $primary;
-                letter-spacing: length(0.25);
+/**=======================================================**
+                USER-LIST TABLE(MOBILE) START
+**=======================================================**/
+.mobiletable {
+    display: none;
+
+    @include breakpoint(tablet991) {
+        @include flex-column;
+        gap: length(14);
+    }
+
+    .tabledetails {
+        @include border(solid, 1, $faqBtnBg);
+
+        .tablerow {
+            @include flex-center-between;
+            background: $white;
+            box-shadow: $rowshadow;
+            cursor: pointer;
+            padding: length(12) length(16);
+
+            @include hover {
+                background: $tableHoverBg;
             }
-        }
 
-        .email {
-            h4 {
-                @include font-face($montserrat, style('normal'), size(14), weight('normal'), line-height(20, 14));
-                color: $primary;
-                letter-spacing: length(0.25);
-            }
-        }
+            .tablecol {
+                .title {
+                    @include font-face($montserrat, style('normal'), size(14), weight('normal'), line-height(20, 14));
+                    color: $primary;
+                    letter-spacing: length(0.25);
+                }
 
-        .phonenumber {
-            h4 {
-                @include font-face($montserrat, style('normal'), size(14), weight('normal'), line-height(20, 14));
-                color: $primary;
-                letter-spacing: length(0.25);
-            }
-        }
+                .value {
+                    @include font-face($montserrat, style('normal'), size(12), weight('normal'), line-height(14, 12));
+                    color: $black;
+                }
 
-        .status {
-            h4 {
-                @include font-face($montserrat, style('normal'), size(14), weight('normal'), line-height(20, 14));
-                color: $primary;
-                letter-spacing: length(0.25);
+                .userthumb {
+                    @include square(length(50));
+                    @include circle;
+                    @include flex-center;
+                    overflow: hidden;
+
+                    img {
+                        @include wh100;
+                    }
+                }
+
+                .status {
+                    @include flex-center-vert;
+                    gap: length(16);
+                }
+
+                .edit-delete {
+                    @include flex-center-vert;
+                    gap: length(10);
+                }
             }
         }
     }

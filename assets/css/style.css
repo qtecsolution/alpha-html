@@ -1330,23 +1330,89 @@ button {
   background: lightgray;
 }
 
+.btn-edit {
+  height: 1.5625rem;
+  width: 1.5625rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+  overflow: hidden;
+  background: #FFD078;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.btn-edit:not([disabled]):hover {
+  background: #ffbe45;
+}
+
+.btn-remove {
+  height: 1.5rem;
+  width: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 100%;
+  padding: 0.125rem;
+  overflow: hidden;
+  background: transparent;
+  border: none;
+}
+
+.btn-status {
+  padding: 0.25rem 0.5rem;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: normal;
+  line-height: 1.33333;
+  border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  letter-spacing: 0.025rem;
+  min-width: 5rem;
+}
+
+.btn-status.active {
+  background: #4AAF05;
+  color: #ffffff;
+}
+
+.btn-status.inactive {
+  background: #FF5756;
+  color: #ffffff;
+}
+
 /**=====================================================**
                         HOME-CARDS
 =======================================================**/
 .modal-content {
   border-radius: 0rem;
   border-radius: 0rem;
-  overflow: hidden;
 }
 
 .modal-header {
-  border-bottom: 0rem;
-  padding: 2rem;
+  padding: 2.5rem;
+  border: none;
 }
 
 @media screen and (max-width: 35.9375rem) {
   .modal-header {
-    padding: 1rem;
+    padding: 1.25rem;
   }
 }
 
@@ -1384,6 +1450,20 @@ button {
 .modal-header .btn-close:not([disabled]):hover {
   -webkit-transform: rotate(90deg);
   transform: rotate(90deg);
+}
+
+.modal-header .btn-close:not([disabled]):hover svg path {
+  fill: #FF5756;
+}
+
+.modal-body {
+  padding: 0rem 2.5rem 2.5rem;
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .modal-body {
+    padding: 0rem 1.25rem 1.25rem;
+  }
 }
 
 .offcanvas-top {
@@ -2257,6 +2337,222 @@ button {
   }
 }
 
+/**=======================================================**
+                    ADD-USER SECTION START
+**=======================================================**/
+.adduserform {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4.625rem;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .adduserform {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+.adduserform .userinfo {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .adduserform .userinfo {
+    width: 100%;
+  }
+}
+
+.adduserform .userinfo .inputbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.75rem;
+  position: relative;
+}
+
+.adduserform .userinfo .inputbox .inputlabel {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 1.125rem;
+  font-weight: normal;
+  line-height: 1.33333;
+  color: #000000;
+}
+
+.adduserform .userinfo .inputbox .inputlabel sup {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1.33333;
+  color: #FF5756;
+}
+
+.adduserform .userinfo .inputbox .inputfield {
+  border-radius: 0.375rem;
+  border-radius: 0.375rem;
+  -webkit-box-shadow: 0.25rem 0rem 0.25rem rgba(0, 0, 0, 0.12), 0rem 0.25rem 0.25rem rgba(0, 0, 0, 0.12);
+          box-shadow: 0.25rem 0rem 0.25rem rgba(0, 0, 0, 0.12), 0rem 0.25rem 0.25rem rgba(0, 0, 0, 0.12);
+  padding: 1rem 4rem 1rem 1.25rem;
+}
+
+@media screen and (max-width: 48rem) {
+  .adduserform .userinfo .inputbox .inputfield {
+    padding: 1rem 2.75rem 1rem 1.25rem;
+  }
+}
+
+.adduserform .userinfo .inputbox .icon {
+  height: 1.5rem;
+  width: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  right: 2.125rem;
+  top: 70%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+}
+
+@media screen and (max-width: 48rem) {
+  .adduserform .userinfo .inputbox .icon {
+    right: 1rem;
+  }
+}
+
+.adduserform .userinfo .inputbox textarea {
+  border: none;
+  outline: none;
+}
+
+.adduserform .userinfo .submitbox .btn-save {
+  width: 12rem;
+  height: 3.25rem;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 1.0625rem;
+  font-weight: 500;
+  line-height: 1.23529;
+  letter-spacing: -0.015rem;
+  background: #25A8E0;
+  color: #ffffff;
+  border-radius: 0.375rem;
+  border-radius: 0.375rem;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.adduserform .userinfo .submitbox .btn-save:not([disabled]):hover {
+  background: #1778a2;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.adduserform .uploadbox {
+  height: 13.75rem;
+  -webkit-box-shadow: 0.25rem 0rem 0.25rem rgba(0, 0, 0, 0.12), 0rem 0.25rem 0.25rem rgba(0, 0, 0, 0.12);
+          box-shadow: 0.25rem 0rem 0.25rem rgba(0, 0, 0, 0.12), 0rem 0.25rem 0.25rem rgba(0, 0, 0, 0.12);
+  border-radius: 0.375rem;
+  border-radius: 0.375rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.adduserform .uploadbox .form-label {
+  cursor: pointer;
+}
+
+.adduserform .uploadbox .form-label .dropinfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+}
+
+.adduserform .uploadbox .form-label .dropinfo .dropicon {
+  height: 8.75rem;
+  width: 8.75rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 100%;
+  overflow: hidden;
+  background: #F5F5F5;
+}
+
+.adduserform .uploadbox .form-label .dropinfo .dropicon img {
+  max-width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.adduserform .uploadbox .form-label .dropinfo .droptext {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: normal;
+  line-height: 1.33333;
+  color: #416072;
+  text-align: center;
+}
+
+/**=======================================================**
+                USER-LIST TABLE(DESKTOP) START
+**=======================================================**/
+@media screen and (max-width: 61.9375rem) {
+  .desktoptable {
+    display: none;
+  }
+}
+
 .desktoptable-header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2271,7 +2567,14 @@ button {
   background: #F5F5F5;
   -webkit-box-shadow: inset 0rem -0.125rem 0rem rgba(0, 0, 0, 0.25);
           box-shadow: inset 0rem -0.125rem 0rem rgba(0, 0, 0, 0.25);
-  padding: 1rem;
+  padding: 0.5rem;
+}
+
+.desktoptable-header .serial {
+  -webkit-box-flex: 5;
+      -ms-flex: 5;
+          flex: 5;
+  text-align: center;
 }
 
 .desktoptable-header .serial h4 {
@@ -2284,7 +2587,48 @@ button {
   letter-spacing: 0.01562rem;
 }
 
-.desktoptable-header .image h4 {
+@media screen and (max-width: 73.0625rem) {
+  .desktoptable-header .serial h4 {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-size: 0.75rem;
+    font-weight: normal;
+    line-height: 1.33333;
+  }
+}
+
+.desktoptable-header .tablerow {
+  padding: 0.5rem 0rem;
+  -webkit-box-flex: 100;
+      -ms-flex: 100;
+          flex: 100;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.desktoptable-header .tablerow .tablecol {
+  width: calc(100% / 6);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.desktoptable-header .tablerow .tablecol h4 {
   font-family: "Montserrat";
   font-style: normal;
   font-size: 0.875rem;
@@ -2294,7 +2638,195 @@ button {
   letter-spacing: 0.01562rem;
 }
 
-.desktoptable-header .name h4 {
+@media screen and (max-width: 73.0625rem) {
+  .desktoptable-header .tablerow .tablecol h4 {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-size: 0.75rem;
+    font-weight: normal;
+    line-height: 1.33333;
+  }
+}
+
+.desktoptable-header .empty {
+  -webkit-box-flex: 10;
+      -ms-flex: 10;
+          flex: 10;
+}
+
+.desktoptable-body .tablerow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  align-items: center;
+}
+
+.desktoptable-body .tablerow .serial {
+  -webkit-box-flex: 5;
+      -ms-flex: 5;
+          flex: 5;
+  text-align: center;
+}
+
+.desktoptable-body .tablerow .serial h4 {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: normal;
+  line-height: 1.16667;
+  color: #000000;
+}
+
+.desktoptable-body .tablerow .tableinfo {
+  -webkit-box-flex: 100;
+      -ms-flex: 100;
+          flex: 100;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  -webkit-box-shadow: inset 0rem -0.0625rem 0rem #E5E5E5;
+          box-shadow: inset 0rem -0.0625rem 0rem #E5E5E5;
+  cursor: pointer;
+  padding: 0.5rem 0rem;
+}
+
+.desktoptable-body .tablerow .tableinfo:not([disabled]):hover {
+  background: #EFF7FF;
+}
+
+.desktoptable-body .tablerow .tableinfo .tablecol {
+  width: calc(100% / 6);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.desktoptable-body .tablerow .tableinfo .tablecol h4 {
+  text-align: center;
+  font-family: "Encode Sans";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.42857;
+  cursor: text;
+}
+
+@media screen and (max-width: 73.0625rem) {
+  .desktoptable-body .tablerow .tableinfo .tablecol h4 {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-size: 0.75rem;
+    font-weight: normal;
+    line-height: 1.33333;
+  }
+}
+
+.desktoptable-body .tablerow .tableinfo .tablecol .image-box {
+  height: 3.125rem;
+  width: 3.125rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 100%;
+  overflow: hidden;
+}
+
+.desktoptable-body .tablerow .tableinfo .tablecol .image-box img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.desktoptable-body .tablerow .edit-delete {
+  -webkit-box-flex: 10;
+      -ms-flex: 10;
+          flex: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 0.625rem;
+}
+
+/**=======================================================**
+                USER-LIST TABLE(MOBILE) START
+**=======================================================**/
+.mobiletable {
+  display: none;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .mobiletable {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 0.875rem;
+  }
+}
+
+.mobiletable .tabledetails {
+  border: solid 0.0625rem #EDEDED;
+}
+
+.mobiletable .tabledetails .tablerow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  -webkit-box-shadow: inset 0rem -0.0625rem 0rem #E5E5E5;
+          box-shadow: inset 0rem -0.0625rem 0rem #E5E5E5;
+  cursor: pointer;
+  padding: 0.75rem 1rem;
+}
+
+.mobiletable .tabledetails .tablerow:not([disabled]):hover {
+  background: #EFF7FF;
+}
+
+.mobiletable .tabledetails .tablerow .tablecol .title {
   font-family: "Montserrat";
   font-style: normal;
   font-size: 0.875rem;
@@ -2304,44 +2836,54 @@ button {
   letter-spacing: 0.01562rem;
 }
 
-.desktoptable-header .location h4 {
+.mobiletable .tabledetails .tablerow .tablecol .value {
   font-family: "Montserrat";
   font-style: normal;
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   font-weight: normal;
-  line-height: 1.42857;
-  color: #333333;
-  letter-spacing: 0.01562rem;
+  line-height: 1.16667;
+  color: #000000;
 }
 
-.desktoptable-header .email h4 {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-size: 0.875rem;
-  font-weight: normal;
-  line-height: 1.42857;
-  color: #333333;
-  letter-spacing: 0.01562rem;
+.mobiletable .tabledetails .tablerow .tablecol .userthumb {
+  height: 3.125rem;
+  width: 3.125rem;
+  border-radius: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
 }
 
-.desktoptable-header .phonenumber h4 {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-size: 0.875rem;
-  font-weight: normal;
-  line-height: 1.42857;
-  color: #333333;
-  letter-spacing: 0.01562rem;
+.mobiletable .tabledetails .tablerow .tablecol .userthumb img {
+  width: 100%;
+  height: 100%;
 }
 
-.desktoptable-header .status h4 {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-size: 0.875rem;
-  font-weight: normal;
-  line-height: 1.42857;
-  color: #333333;
-  letter-spacing: 0.01562rem;
+.mobiletable .tabledetails .tablerow .tablecol .status {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+
+.mobiletable .tabledetails .tablerow .tablecol .edit-delete {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.625rem;
 }
 
 /**=======================================================**
@@ -2391,210 +2933,6 @@ button {
   color: #333333;
 }
 
-.main .add-user .adduser-body .adduserform {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 4.625rem;
-}
-
-@media screen and (max-width: 61.9375rem) {
-  .main .add-user .adduser-body .adduserform {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    gap: 2rem;
-  }
-}
-
-.main .add-user .adduser-body .adduserform .userinfo {
-  width: 50%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: 2rem;
-}
-
-@media screen and (max-width: 61.9375rem) {
-  .main .add-user .adduser-body .adduserform .userinfo {
-    width: 100%;
-  }
-}
-
-.main .add-user .adduser-body .adduserform .userinfo .inputbox {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: 0.75rem;
-  position: relative;
-}
-
-.main .add-user .adduser-body .adduserform .userinfo .inputbox .inputlabel {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-size: 1.125rem;
-  font-weight: normal;
-  line-height: 1.33333;
-  color: #000000;
-}
-
-.main .add-user .adduser-body .adduserform .userinfo .inputbox .inputlabel sup {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-size: 1.125rem;
-  font-weight: 500;
-  line-height: 1.33333;
-  color: #FF5756;
-}
-
-.main .add-user .adduser-body .adduserform .userinfo .inputbox .inputfield {
-  border-radius: 0.375rem;
-  border-radius: 0.375rem;
-  -webkit-box-shadow: 0.25rem 0rem 0.25rem rgba(0, 0, 0, 0.12), 0rem 0.25rem 0.25rem rgba(0, 0, 0, 0.12);
-          box-shadow: 0.25rem 0rem 0.25rem rgba(0, 0, 0, 0.12), 0rem 0.25rem 0.25rem rgba(0, 0, 0, 0.12);
-  padding: 1rem 4rem 1rem 1.25rem;
-}
-
-@media screen and (max-width: 48rem) {
-  .main .add-user .adduser-body .adduserform .userinfo .inputbox .inputfield {
-    padding: 1rem 2.75rem 1rem 1.25rem;
-  }
-}
-
-.main .add-user .adduser-body .adduserform .userinfo .inputbox .icon {
-  height: 1.5rem;
-  width: 1.5rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  position: absolute;
-  right: 2.125rem;
-  top: 70%;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
-  background: transparent;
-  border: none;
-}
-
-@media screen and (max-width: 48rem) {
-  .main .add-user .adduser-body .adduserform .userinfo .inputbox .icon {
-    right: 1rem;
-  }
-}
-
-.main .add-user .adduser-body .adduserform .userinfo .inputbox textarea {
-  border: none;
-  outline: none;
-}
-
-.main .add-user .adduser-body .adduserform .userinfo .submitbox .btn-save {
-  width: 12rem;
-  height: 3.25rem;
-  font-family: "Montserrat";
-  font-style: normal;
-  font-size: 1.0625rem;
-  font-weight: 500;
-  line-height: 1.23529;
-  letter-spacing: -0.015rem;
-  background: #25A8E0;
-  color: #ffffff;
-  border-radius: 0.375rem;
-  border-radius: 0.375rem;
-  -webkit-transition: all 250ms ease-in-out;
-  transition: all 250ms ease-in-out;
-}
-
-.main .add-user .adduser-body .adduserform .userinfo .submitbox .btn-save:not([disabled]):hover {
-  background: #1778a2;
-  color: rgba(255, 255, 255, 0.8);
-}
-
-.main .add-user .adduser-body .adduserform .uploadbox {
-  height: 13.75rem;
-  -webkit-box-shadow: 0.25rem 0rem 0.25rem rgba(0, 0, 0, 0.12), 0rem 0.25rem 0.25rem rgba(0, 0, 0, 0.12);
-          box-shadow: 0.25rem 0rem 0.25rem rgba(0, 0, 0, 0.12), 0rem 0.25rem 0.25rem rgba(0, 0, 0, 0.12);
-  border-radius: 0.375rem;
-  border-radius: 0.375rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.main .add-user .adduser-body .adduserform .uploadbox .form-label {
-  cursor: pointer;
-}
-
-.main .add-user .adduser-body .adduserform .uploadbox .form-label .dropinfo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: 1rem;
-}
-
-.main .add-user .adduser-body .adduserform .uploadbox .form-label .dropinfo .dropicon {
-  height: 8.75rem;
-  width: 8.75rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  border-radius: 100%;
-  overflow: hidden;
-  background: #F5F5F5;
-}
-
-.main .add-user .adduser-body .adduserform .uploadbox .form-label .dropinfo .dropicon img {
-  max-width: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
-}
-
-.main .add-user .adduser-body .adduserform .uploadbox .form-label .dropinfo .droptext {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-size: 0.75rem;
-  font-weight: normal;
-  line-height: 1.33333;
-  color: #416072;
-  text-align: center;
-}
-
 /**=======================================================**
                         USER-LIST SECTION START
 **=======================================================**/
@@ -2605,6 +2943,12 @@ button {
 @media screen and (max-width: 61.9375rem) {
   .userlist {
     padding: 1.25rem 2.5rem 5rem;
+  }
+}
+
+@media screen and (max-width: 48rem) {
+  .userlist {
+    padding: 1.25rem 1.25rem 5rem;
   }
 }
 
@@ -2757,6 +3101,156 @@ button {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
+}
+
+/**=======================================================**
+                    TABLE-PAGINATIONS START
+**=======================================================**/
+.tablepaginations {
+  padding: 1.5rem 5rem 5rem;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .tablepaginations {
+    padding: 1.25rem 2.5rem 3.75rem;
+  }
+}
+
+@media screen and (max-width: 48rem) {
+  .tablepaginations {
+    padding: 1.25rem 1.25rem 2.5rem;
+  }
+}
+
+.tablepaginations .paginationcontent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  gap: 3rem;
+}
+
+@media screen and (max-width: 25.875rem) {
+  .tablepaginations .paginationcontent {
+    gap: 0.5rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.tablepaginations .paginationcontent .pages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.tablepaginations .paginationcontent .pages label {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.42857;
+  color: #9FA2B4;
+  letter-spacing: 0.01875rem;
+}
+
+.tablepaginations .paginationcontent .pages select {
+  min-width: 3rem;
+  background: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.98351 4.5H9.01398C9.43117 4.5 9.63976 5.00391 9.34445 5.29922L6.33039 8.31562C6.14757 8.49844 5.84992 8.49844 5.66711 8.31562L2.65304 5.29922C2.35773 5.00391 2.56632 4.5 2.98351 4.5Z' fill='%239FA2B4'/%3E%3C/svg%3E%0A") no-repeat right;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+          appearance: none;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1;
+  color: #4B506D;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+.tablepaginations .paginationcontent .pagesresult {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.5rem;
+}
+
+@media screen and (max-width: 25.875rem) {
+  .tablepaginations .paginationcontent .pagesresult {
+    gap: 1.25rem;
+  }
+}
+
+.tablepaginations .paginationcontent .pagesresult .resultbox .textresult {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.42857;
+  color: #9FA2B4;
+  letter-spacing: 0.01875rem;
+}
+
+.tablepaginations .paginationcontent .pagesresult .resultactions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.75rem;
+}
+
+.tablepaginations .paginationcontent .pagesresult .resultactions .btn-prev,
+.tablepaginations .paginationcontent .pagesresult .resultactions .btn-next {
+  height: 1.5rem;
+  width: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+  background: transparent;
+  border: none;
+}
+
+.tablepaginations .paginationcontent .pagesresult .resultactions .btn-prev svg path,
+.tablepaginations .paginationcontent .pagesresult .resultactions .btn-next svg path {
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.tablepaginations .paginationcontent .pagesresult .resultactions .btn-prev:not([disabled]):hover svg path,
+.tablepaginations .paginationcontent .pagesresult .resultactions .btn-next:not([disabled]):hover svg path {
+  stroke: #333333;
 }
 
 /**=====================================================

@@ -1,0 +1,118 @@
+/**=======================================================**
+                    ADD-USER SECTION START
+**=======================================================**/
+.adduserform {
+    display: flex;
+    gap: length(74);
+
+    @include breakpoint(tablet991) {
+        flex-direction: column;
+        gap: length(32);
+    }
+
+    .userinfo {
+        width: 50%;
+        @include flex-column;
+        gap: length(32);
+
+        @include breakpoint(tablet991) {
+            @include w100;
+        }
+
+        .inputbox {
+            @include flex-column;
+            gap: length(12);
+            position: relative;
+
+            .inputlabel {
+                @include font-face($montserrat, style('normal'), size(18), weight('normal'), line-height(24, 18));
+                color: $black;
+
+                sup {
+                    @include font-face($montserrat, style('normal'), size(18), weight('medium'), line-height(24, 18));
+                    color: $textDanger;
+                }
+            }
+
+            .inputfield {
+                @include radius(6);
+                box-shadow: $inputshadow;
+                padding: length(16) length(64) length(16) length(20);
+
+                @include breakpoint(phone768) {
+                    padding: length(16) length(44) length(16) length(20);
+                }
+            }
+
+            .icon {
+                @include square(length(24));
+                @include flex-center;
+                position: absolute;
+                right: length(34);
+                top: 70%;
+                @include transform(translateY(-50%));
+                @include transparent-button;
+
+                @include breakpoint(phone768) {
+                    right: length(16);
+                }
+            }
+
+            textarea {
+                border: none;
+                outline: none;
+            }
+        }
+
+        .submitbox {
+            .btn-save {
+                width: length(192);
+                height: length(52);
+                @include font-face($montserrat, style('normal'), size(17), weight('medium'), line-height(21, 17));
+                letter-spacing: length(-0.24);
+                @include setBgColor($textPrimary, $white);
+                @include radius(6);
+                @include transitions;
+
+                @include hover {
+                    @include setBgColor(darken($textPrimary, 15%), rgba($white, 0.8));
+                }
+            }
+        }
+    }
+
+    .uploadbox {
+        height: length(220);
+        box-shadow: $inputshadow;
+        @include radius(6);
+        @include flex-center;
+
+        .form-label {
+            cursor: pointer;
+
+            .dropinfo {
+                @include flex-center-column;
+                gap: length(16);
+
+                .dropicon {
+                    @include square(length(140));
+                    @include flex-center;
+                    @include circle;
+                    overflow: hidden;
+                    background: $headerBottomBg;
+
+                    img {
+                        max-width: 100%;
+                        object-fit: contain;
+                    }
+                }
+
+                .droptext {
+                    @include font-face($montserrat, style('normal'), size(12), weight('normal'), line-height(16, 12));
+                    color: $dropzoneText;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

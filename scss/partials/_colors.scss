@@ -42,6 +42,12 @@ $dropdownBorder: #D6E4EC;
 $headerBottomBg: #F5F5F5;
 $addBtnBg: #E5E5E5;
 $dropzoneText: #416072;
+$editBg: #FFD078;
+$successBg: #4AAF05;
+$tableHoverBg: #EFF7FF;
+$paginationLabelText: #9FA2B4;
+$paginationNumberText: #4B506D;
+$footerBg: #25A8E0;
 
 // SHADOWS
 $shadow-1: rgba(162, 162, 162, 0.25);
@@ -59,5 +65,6 @@ $dropdownshadow: 0rem .125rem .5rem $shade-1,
 
 $inputshadow: .25rem 0rem .25rem $shade-3,
 0rem .25rem .25rem $shade-3;
-
 $tableshadow: inset 0rem -0.125rem 0rem $shade-4;
+
+$rowshadow: inset 0rem -0.0625rem 0rem $addBtnBg;

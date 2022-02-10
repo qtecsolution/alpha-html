@@ -36,3 +36,42 @@
         background: darken($addBtnBg, 7%);
     }
 }
+
+.btn-edit {
+    @include square(length(25));
+    @include flex-center;
+    @include radius(4);
+    padding: length(8);
+    overflow: hidden;
+    background: $editBg;
+    @include transitions;
+
+    @include hover {
+        background: darken($editBg, 10%);
+    }
+}
+
+.btn-remove {
+    @include square(length(24));
+    @include flex-center;
+    @include circle;
+    padding: length(2);
+    overflow: hidden;
+    @include transparent-button;
+}
+
+.btn-status {
+    padding: length(4) length(8);
+    @include font-face($montserrat, style('normal'), size(12), weight('normal'), line-height(16, 12));
+    @include radius(4);
+    letter-spacing: length(0.4);
+    min-width: length(80);
+
+    &.active {
+        @include setBgColor($successBg, $white);
+    }
+
+    &.inactive {
+        @include setBgColor($textDanger, $white);
+    }
+}

@@ -5,7 +5,7 @@
     height: length(48);
     @include flex-center;
     text-align: center;
-    background: $textPrimary;
+    background: $footerBg;
 
     .copyright-text {
         @include font-face($montserrat, style('normal'), size(14), weight('medium'), line-height(20, 14));
