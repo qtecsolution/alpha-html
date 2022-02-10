@@ -1,0 +1,91 @@
+/**=======================================================**
+                        USER-LIST SECTION START
+**=======================================================**/
+.userlist {
+    padding: length(24) length(80) length(140);
+
+    @include breakpoint(tablet991) {
+        padding: length(20) length(40) length(80);
+    }
+
+    &-content {
+        @include flex-column;
+        gap: length(64);
+    }
+
+    &-header {
+        @include flex-center-between;
+
+        @include breakpoint(phone768) {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: length(20);
+        }
+
+        .titleinfo {
+            .userlist-title {
+                @include font-face($montserrat, style('normal'), size(24), weight('bold'), line-height(31.68, 24));
+                color: $primary;
+            }
+        }
+
+        .rightinfo {
+            @include flex-center-vert;
+            gap: length(72);
+
+            @include breakpoint(phone768) {
+                gap: length(32);
+                justify-content: space-between;
+                @include w100;
+            }
+
+            @include breakpoint(phone575) {
+                flex-direction: column;
+            }
+
+            .searchbox {
+                width: length(264);
+                background: $headerBottomBg;
+                @include flex-center-vert;
+                @include radius(4);
+
+                @include breakpoint(phone575) {
+                    @include w100;
+                }
+
+                .searchfield {
+                    padding: length(8) length(12);
+                    background: transparent;
+                    width: calc(100% - 2.5rem);
+                    @include font-face($montserrat, style('normal'), size(14), weight('normal'), line-height(20, 14));
+                    letter-spacing: length(0.25);
+                    color: $primary;
+                }
+
+                .btn-search {
+                    @include square(length(40));
+                    @include flex-center;
+                    background: $addBtnBg;
+                    padding: length(11);
+                    @include radius(4);
+                    overflow: hidden;
+                    @include transitions;
+
+                    @include hover {
+                        background: darken($addBtnBg, 7%);
+                    }
+                }
+            }
+
+            .addinfo-downloadinfo {
+                @include flex-center-vert;
+                gap: length(16);
+
+                @include breakpoint(phone575) {
+                    @include w100;
+                    justify-content: space-between;
+                }
+            }
+        }
+    }
+}

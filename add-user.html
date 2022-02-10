@@ -7,8 +7,6 @@
     <title>Alpha | Add User</title>
     <!-- FAVICON -->
     <link rel="shortcut icon" href="favicon.svg" type="image/svg">
-    <!-- DROPZONE CSS -->
-    <link rel="stylesheet" href="assets/css/dropzone.min.css">
     <!-- BOOTSTAP CSS -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <!-- ALPHA STYLE -->
@@ -442,20 +440,22 @@
                     <!-- USER-INFO START -->
                     <div class="userinfo">
                         <div class="inputbox">
-                            <label for="userpass" class="inputlabel">Upload Picture</label>
+                            <label for="upload" class="inputlabel">Upload Picture</label>
 
-                            <div class="dropzone">
-                                <input type="file" name="file" class="inputfield" hidden>
-                                
-                                <div class="dropinfo">
-                                    <div class="dropicon">
-                                        <img src="assets/images/pages/icons/add-delivery.svg" alt="file-icon">
+                            <div class="uploadbox">
+                                <label for="formFile" class="form-label">
+                                    <div class="dropinfo">
+                                        <div class="dropicon">
+                                            <img src="assets/images/pages/icons/add-delivery.svg" alt="file-icon">
+                                        </div>
+                                        
+                                        <p class="droptext">
+                                            Drag and drop choose file to upload your files.
+                                        </p>
                                     </div>
-                                    
-                                    <p class="droptext">
-                                        Drag and drop choose file to upload your files.
-                                    </p>
-                                </div>
+                                </label>
+
+                                <input class="form-control" type="file" id="formFile" hidden>
                             </div>
                         </div>
 
@@ -505,9 +505,5 @@
 
     <!-- BOOTSTRAP JS -->
     <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <!-- DROPZONE JS -->
-    <script src="assets/js/dropzone.min.js"></script>
-    <!-- DRAG-DROP JS -->
-    <script src="assets/js/dragdrop.js"></script>
 </body>
 </html>

@@ -1,0 +1,64 @@
+.desktoptable {
+    &-header {
+        @include flex-center-between;
+        background: $headerBottomBg;
+        box-shadow: $tableshadow;
+        padding: length(16);
+
+        .serial {
+            h4 {
+                @include font-face($montserrat, style('normal'), size(14), weight('normal'), line-height(20, 14));
+                color: $primary;
+                letter-spacing: length(0.25);
+            }
+        }
+
+        .image {
+            h4 {
+                @include font-face($montserrat, style('normal'), size(14), weight('normal'), line-height(20, 14));
+                color: $primary;
+                letter-spacing: length(0.25);
+            }
+        }
+
+        .name {
+            h4 {
+                @include font-face($montserrat, style('normal'), size(14), weight('normal'), line-height(20, 14));
+                color: $primary;
+                letter-spacing: length(0.25);
+            }
+        }
+
+        .location {
+            h4 {
+                @include font-face($montserrat, style('normal'), size(14), weight('normal'), line-height(20, 14));
+                color: $primary;
+                letter-spacing: length(0.25);
+            }
+        }
+
+        .email {
+            h4 {
+                @include font-face($montserrat, style('normal'), size(14), weight('normal'), line-height(20, 14));
+                color: $primary;
+                letter-spacing: length(0.25);
+            }
+        }
+
+        .phonenumber {
+            h4 {
+                @include font-face($montserrat, style('normal'), size(14), weight('normal'), line-height(20, 14));
+                color: $primary;
+                letter-spacing: length(0.25);
+            }
+        }
+
+        .status {
+            h4 {
+                @include font-face($montserrat, style('normal'), size(14), weight('normal'), line-height(20, 14));
+                color: $primary;
+                letter-spacing: length(0.25);
+            }
+        }
+    }
+}

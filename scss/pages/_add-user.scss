@@ -20,14 +20,6 @@
                 @include font-face($montserrat, style('normal'), size(24), weight('bold'), line-height(31.68, 24));
                 color: $primary;
             }
-
-            .btn-add {
-                background: $addBtnBg;
-                @include square(length(40));
-                @include radius(4);
-                @include flex-center;
-                overflow: hidden;
-            }
         }
 
         .adduser-body {
@@ -112,39 +104,37 @@
                     }
                 }
 
-                .dz-message {
-                    display: none;
-                }
-
-                .dropzone {
-                    position: relative;
-                    background: transparent;
-                    border: none;
-                    box-shadow: $inputshadow;
+                .uploadbox {
                     height: length(220);
+                    box-shadow: $inputshadow;
                     @include radius(6);
+                    @include flex-center;
 
-                    .dropinfo {
-                        @include position-center;
-                        z-index: -1;
-                        @include flex-center-column;
-                        gap: length(16);
+                    .form-label {
+                        cursor: pointer;
 
-                        .dropicon {
-                            @include square(length(74));
-                            @include flex-center;
-                            overflow: hidden;
+                        .dropinfo {
+                            @include flex-center-column;
+                            gap: length(16);
 
-                            img {
-                                @include wh100;
-                                object-fit: contain;
+                            .dropicon {
+                                @include square(length(140));
+                                @include flex-center;
+                                @include circle;
+                                overflow: hidden;
+                                background: $headerBottomBg;
+
+                                img {
+                                    max-width: 100%;
+                                    object-fit: contain;
+                                }
                             }
-                        }
 
-                        .droptext {
-                            @include font-face($montserrat, style('normal'), size(12), weight('normal'), line-height(16, 12));
-                            color: $dropzoneText;
-                            text-align: center;
+                            .droptext {
+                                @include font-face($montserrat, style('normal'), size(12), weight('normal'), line-height(16, 12));
+                                color: $dropzoneText;
+                                text-align: center;
+                            }
                         }
                     }
                 }
