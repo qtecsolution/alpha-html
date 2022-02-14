@@ -17,6 +17,11 @@
         gap: length(64);
     }
 
+    .deliverylist-content {
+        @include flex-column;
+        gap: length(32);
+    }
+
     &-header {
         @include flex-center-between;
 

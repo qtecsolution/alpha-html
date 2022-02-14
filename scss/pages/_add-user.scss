@@ -11,19 +11,19 @@
     @include breakpoint(phone768) {
         padding: length(20) length(20) length(80);
     }
+}
 
-    .add-user {
-        @include w100;
-        @include flex-column;
-        gap: length(32);
+.add-user {
+    @include w100;
+    @include flex-column;
+    gap: length(32);
 
-        .adduser-header {
-            @include flex-center-between;
+    .adduser-header {
+        @include flex-center-between;
 
-            .add-title {
-                @include font-face($montserrat, style('normal'), size(24), weight('bold'), line-height(31.68, 24));
-                color: $primary;
-            }
+        .add-title {
+            @include font-face($montserrat, style('normal'), size(24), weight('bold'), line-height(31.68, 24));
+            color: $primary;
         }
     }
 }

@@ -48,7 +48,7 @@
                 @include square(length(24));
                 @include flex-center;
                 position: absolute;
-                right: length(34);
+                right: length(16);
                 top: 70%;
                 @include transform(translateY(-50%));
                 @include transparent-button;
@@ -76,6 +76,26 @@
 
                 @include hover {
                     @include setBgColor(darken($textPrimary, 15%), rgba($white, 0.8));
+                }
+            }
+        }
+    }
+
+    .uploadinfo {
+        @include w100;
+
+        .inputbox {
+            @include flex-column;
+            gap: length(12);
+            position: relative;
+
+            .inputlabel {
+                @include font-face($montserrat, style('normal'), size(18), weight('normal'), line-height(24, 18));
+                color: $black;
+
+                sup {
+                    @include font-face($montserrat, style('normal'), size(18), weight('medium'), line-height(24, 18));
+                    color: $textDanger;
                 }
             }
         }

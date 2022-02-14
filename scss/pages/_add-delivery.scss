@@ -1,4 +1,23 @@
 
 /**=====================================================
-                    FAQ-SECTION
+                    ADD-DELIVERY
 =====================================================**/
+.deliveryroute {
+    margin-top: length(52);
+    @include flex-end;
+
+    .btn-assign {
+        width: length(229);
+        height: length(52);
+        @include radius(6);
+        text-align: center;
+        @include setBgColor($addBtnBg, $assignText);
+        @include font-face($montserrat, style('normal'), size(17), weight('medium'), line-height(20.72, 17));
+        letter-spacing: length(-0.24);
+        @include transitions;
+
+        @include hover {
+            @include setBgColor($assignText, $addBtnBg);
+        }
+    }
+}
