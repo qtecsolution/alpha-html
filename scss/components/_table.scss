@@ -117,6 +117,60 @@
     }
 }
 
+.wearhousetable {
+    .desktoptable-header {
+        .changeorder {
+            flex: 10;
+            text-align: center;
+
+            h4 {
+                @include font-face($montserrat, style('normal'), size(14), weight('normal'), line-height(20, 14));
+                color: $primary;
+                letter-spacing: length(0.25);
+
+                @include breakpoint(desktop1169) {
+                    @include font-face($montserrat, style('normal'), size(12), weight('normal'), line-height(16, 12));
+                }
+            }
+        }
+
+        .tablerow {
+            flex: 85;
+        }
+    }
+
+    .desktoptable-body {
+
+        .tablerow {
+            .serial {
+                flex: 5;
+            }
+
+            .orderchange {
+                flex: 10;
+                text-align: center;
+                @include flex-center;
+                gap: length(8);
+
+                .btn-orderchange {
+                    @include transparent-button;
+                    @include square(length(24));
+                    @include circle;
+                    overflow: hidden;
+
+                    svg {
+                        @include wh100;
+                    }
+                }
+            }
+
+            .tableinfo {
+                flex: 85;
+            }
+        }
+    }
+}
+
 /**=======================================================**
                 USER-LIST TABLE(MOBILE) START
 **=======================================================**/
@@ -149,6 +203,11 @@
                     letter-spacing: length(0.25);
                 }
 
+                .checksinfo {
+                    @include square(length(40));
+                    @include flex-center;
+                }
+
                 .value {
                     @include font-face($montserrat, style('normal'), size(12), weight('normal'), line-height(14, 12));
                     color: $black;
@@ -173,6 +232,32 @@
                 .edit-delete {
                     @include flex-center-vert;
                     gap: length(10);
+                }
+            }
+        }
+    }
+}
+
+.wearhousemobiletable {
+    .tabledetails {
+        .tablerow {
+            .tablecol {
+                .orderchange {
+                    flex: 10;
+                    text-align: center;
+                    @include flex-center;
+                    gap: length(8);
+
+                    .btn-orderchange {
+                        @include transparent-button;
+                        @include square(length(24));
+                        @include circle;
+                        overflow: hidden;
+
+                        svg {
+                            @include wh100;
+                        }
+                    }
                 }
             }
         }

@@ -1,0 +1,110 @@
+.wearhouselist {
+    padding: length(32) length(48) length(64);
+
+    @include breakpoint(tablet991) {
+        padding: length(24) length(40) length(48);
+    }
+
+    .wearhouse-head {
+        @include flex-column;
+        gap: length(16);
+
+        .wearhousetitle {
+            @include font-face($montserrat, style('normal'), size(18), weight('semibold'), line-height(24, 18));
+            color: $black;
+        }
+
+        .wearhouse-search {
+            @include w100;
+            background: $white;
+            box-shadow: $inputshadow;
+            padding: length(10);
+            @include radius(6);
+            @include flex-center-vert;
+
+            .searchfield {
+                width: calc(100% - 2.5rem);
+                padding: length(10);
+                height: length(40);
+                color: $primary;
+                @include font-face($montserrat, style('normal'), size(14), weight('normal'), line-height(20, 14));
+                letter-spacing: length(0.25);
+            }
+
+            .btn-search {
+                @include square(length(40));
+                @include flex-center;
+                background: $addBtnBg;
+                border: none;
+                @include radius(4);
+                padding: length(10);
+                overflow: hidden;
+
+                svg {
+                    @include wh100;
+                }
+            }
+        }
+
+        .suggested-items {
+            @include flex-center-vert;
+            gap: length(16);
+            flex-wrap: wrap;
+
+            .suggested {
+                @include flex-center;
+                gap: length(16);
+                background: $white;
+                box-shadow: $suggestedShadow;
+                padding: length(10);
+                @include radius(5);
+                // width: calc(33% - 1rem);
+
+                .text {
+                    @include font-face($montserrat, style('normal'), size(10), weight('normal'), line-height(14, 10));
+                    color: $primary;
+                }
+
+                .btn-remove {
+                    @include transparent-button;
+                    @include square(length(18));
+                    @include circle;
+                    @include flex-center;
+                    overflow: hidden;
+
+                    svg {
+                        @include wh100;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.resultmap {
+    padding: length(32) length(48) length(64);
+    @include flex-column;
+    gap: length(32);
+
+    @include breakpoint(tablet991) {
+        padding: length(24) length(40) length(48);
+    }
+
+    &-header {
+        .resultmap-title {
+            @include font-face($montserrat, style('normal'), size(20), weight('normal'), line-height(24, 20));
+            color: $black;
+            letter-spacing: length(0.176);
+            text-align: center;
+        }
+    }
+
+    &-body {
+        overflow: hidden;
+        padding-bottom: length(48);
+
+        img {
+            @include wh100;
+        }
+    }
+}

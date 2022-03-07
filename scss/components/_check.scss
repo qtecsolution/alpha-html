@@ -1,0 +1,45 @@
+.checitems {
+    &:checked~.checklabel {
+        &::before {
+            background: $checkBg;
+        }
+
+        &::after {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}
+
+.checklabel {
+    position: relative;
+    cursor: pointer;
+
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+    }
+
+    &::before {
+        background: transparent;
+        @include square(length(20));
+        @include border(solid, 2, $checkBg);
+        @include radius(4);
+        top: 50%;
+        @include transform(translateY(-50%));
+        @include transitions;
+    }
+
+    &::after {
+        width: length(5);
+        height: length(11);
+        @include border(solid, 2, $white);
+        border-top: 0;
+        border-left: 0;
+        top: 60%;
+        left: length(8);
+        @include transform(translateY(-60%) rotate(45deg));
+        @include transitions;
+    }
+}

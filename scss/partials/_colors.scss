@@ -20,6 +20,7 @@ $showroomBorder: rgba(21, 21, 21, 0.15);
 $scheduleBg: #0E0E0E;
 $textSchedule: #B9B8B8;
 $faqBtnBg: #EDEDED;
+$checkBg: #231F20;
 
 // NORMAL COLORS
 $black: #000000;
@@ -60,6 +61,7 @@ $shade-1: rgba(117, 131, 142, 0.04);
 $shade-2: rgba(52, 60, 68, 0.12);
 $shade-3: rgba(0, 0, 0, 0.12);
 $shade-4: rgba(0, 0, 0, 0.25);
+$shadow-5: rgba(124, 124, 124, 0.25);
 
 $dropdownshadow: 0rem .125rem .5rem $shade-1,
 0rem 1rem 1.5rem $shade-2;
@@ -69,3 +71,5 @@ $inputshadow: .25rem 0rem .25rem $shade-3,
 $tableshadow: inset 0rem -0.125rem 0rem $shade-4;
 
 $rowshadow: inset 0rem -0.0625rem 0rem $addBtnBg;
+
+$suggestedShadow: 0rem .25rem .3125rem $shadow-5;
