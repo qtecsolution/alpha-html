@@ -3538,10 +3538,10 @@ button {
 .wearhouselist .wearhouse-head .wearhousetitle {
   font-family: "Montserrat";
   font-style: normal;
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   font-weight: 600;
-  line-height: 1.33333;
-  color: #000000;
+  line-height: 1.2;
+  color: #252733;
 }
 
 .wearhouselist .wearhouse-head .wearhouse-search {
@@ -3698,6 +3698,177 @@ button {
 .resultmap-body img {
   width: 100%;
   height: 100%;
+}
+
+.routelist {
+  padding: 2rem 5rem 8rem;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .routelist {
+    padding: 1.5rem 2.5rem 8rem;
+  }
+}
+
+@media screen and (max-width: 48rem) {
+  .routelist {
+    padding: 1.5rem 1.25rem 8rem;
+  }
+}
+
+.routelist-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.5rem;
+}
+
+.routelist .routelist-head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.5rem;
+}
+
+.routelist .routelist-head .routelist-title {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #000000;
+  letter-spacing: 0.025rem;
+}
+
+.routelist .routelist-head .routelist-dates .datebox {
+  width: 50%;
+  background: #ffffff;
+  -webkit-box-shadow: 0rem 0.25rem 0.3125rem rgba(0, 0, 0, 0.25);
+          box-shadow: 0rem 0.25rem 0.3125rem rgba(0, 0, 0, 0.25);
+  padding: 0.75rem;
+  border-radius: 0.3125rem;
+  border-radius: 0.3125rem;
+}
+
+@media screen and (max-width: 30rem) {
+  .routelist .routelist-head .routelist-dates .datebox {
+    width: 100%;
+  }
+}
+
+.routelist .routelist-head .routelist-dates .datefield {
+  width: 100%;
+  text-align: center;
+}
+
+.routelist-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 3rem;
+}
+
+.routelist-body .routelists {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.25rem;
+}
+
+.routelist-body .routelists-header .routelist-date {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 1.1875rem;
+  font-weight: 600;
+  line-height: 1.25526;
+  color: #252733;
+  letter-spacing: 0.025rem;
+}
+
+.drp-buttons {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  gap: 0.875rem;
+  padding: 0.875rem;
+  width: 100%;
+}
+
+.drp-buttons .drp-selected {
+  padding-right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1;
+}
+
+.drp-buttons .btn {
+  padding: 0 !important;
+  margin: 0 !important;
+  border: 0;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.drp-buttons .btn:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  outline: none;
+}
+
+.drp-buttons .btn-primary {
+  background: #25A8E0;
+  color: #ffffff;
+  padding: 0.625rem 1rem !important;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.drp-buttons .btn-primary:not([disabled]):hover {
+  background: #14678b;
+}
+
+.drp-buttons .cancelBtn:not([disabled]):hover {
+  color: #FF5756;
+}
+
+.daterangepicker .drp-buttons .btn {
+  padding: 0;
+}
+
+.daterangepicker {
+  border: none;
+  -webkit-box-shadow: 0rem 0.25rem 0.3125rem rgba(0, 0, 0, 0.25);
+          box-shadow: 0rem 0.25rem 0.3125rem rgba(0, 0, 0, 0.25);
 }
 
 .decories-container {

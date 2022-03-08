@@ -10,8 +10,8 @@
         gap: length(16);
 
         .wearhousetitle {
-            @include font-face($montserrat, style('normal'), size(18), weight('semibold'), line-height(24, 18));
-            color: $black;
+            @include font-face($montserrat, style('normal'), size(20), weight('semibold'), line-height(24, 20));
+            color: $textTitle;
         }
 
         .wearhouse-search {

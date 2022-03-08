@@ -50,6 +50,7 @@ $paginationLabelText: #9FA2B4;
 $paginationNumberText: #4B506D;
 $footerBg: #25A8E0;
 $assignText: #606064;
+$textTitle: #252733;
 
 // SHADOWS
 $shadow-1: rgba(162, 162, 162, 0.25);
@@ -68,8 +69,11 @@ $dropdownshadow: 0rem .125rem .5rem $shade-1,
 
 $inputshadow: .25rem 0rem .25rem $shade-3,
 0rem .25rem .25rem $shade-3;
+
 $tableshadow: inset 0rem -0.125rem 0rem $shade-4;
 
 $rowshadow: inset 0rem -0.0625rem 0rem $addBtnBg;
 
 $suggestedShadow: 0rem .25rem .3125rem $shadow-5;
+
+$dateshadow: 0rem .25rem .3125rem $shade-4;

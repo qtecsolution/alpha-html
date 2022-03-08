@@ -1,0 +1,115 @@
+.routelist {
+    padding: length(32) length(80) length(128);
+
+    @include breakpoint(tablet991) {
+        padding: length(24) length(40) length(128);
+    }
+
+    @include breakpoint(phone768) {
+        padding: length(24) length(20) length(128);
+    }
+
+    &-content {
+        @include flex-column;
+        gap: length(40);
+    }
+
+    .routelist-head {
+        @include flex-column;
+        gap: length(40);
+
+        .routelist-title {
+            @include font-face($montserrat, style('normal'), size(20), weight('semibold'), line-height(24, 20));
+            color: $black;
+            letter-spacing: length(0.4);
+        }
+
+        .routelist-dates {
+            .datebox {
+                width: 50%;
+                background: $white;
+                box-shadow: $dateshadow;
+                padding: length(12);
+                @include radius(5);
+
+                @include breakpoint(phone480) {
+                    @include w100;
+                }
+            }
+
+            .datefield {
+                @include w100;
+                text-align: center;
+            }
+        }
+    }
+
+    &-body {
+        @include flex-column;
+        gap: length(48);
+
+        .routelists {
+            @include flex-column;
+            gap: length(20);
+
+            &-header {
+                .routelist-date {
+                    @include font-face($montserrat, style('normal'), size(19), weight('semibold'), line-height(23.85, 19));
+                    color: $textTitle;
+                    letter-spacing: length(0.4);
+                }
+            }
+        }
+    }
+}
+
+.drp-buttons {
+    display: flex !important;
+    justify-content: flex-end;
+    gap: length(14);
+    padding: length(14);
+    @include w100;
+
+    .drp-selected {
+        padding-right: 0;
+        @include flex-center-vert;
+        @include font-face($montserrat, style('normal'), size(14), weight('normal'), line-height(14, 14));
+    }
+
+    .btn {
+        padding: 0 !important;
+        margin: 0 !important;
+        border: 0;
+        @include font-face($montserrat, style('normal'), size(14), weight('semibold'), line-height(14, 14));
+
+        &:focus {
+            box-shadow: none;
+            outline: none;
+        }
+    }
+
+    .btn-primary {
+        @include setBgColor($textPrimary, $white);
+        padding: length(10) length(16) !important;
+        @include transitions;
+
+        @include hover {
+            background: darken($textPrimary, 20%);
+        }
+    }
+
+    .cancelBtn {
+        @include hover {
+            color: $textDanger;
+        }
+    }
+}
+
+.daterangepicker .drp-buttons .btn {
+    padding: 0;
+}
+
+.daterangepicker {
+    border: none;
+    box-shadow: $dateshadow;
+}
