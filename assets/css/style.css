@@ -3801,6 +3801,18 @@ button {
   letter-spacing: 0.025rem;
 }
 
+.routelist-body .routelists .smalltable .desktoptable-header .tablerow {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.routelist-body .routelists .smalltable .desktoptable-body .tablerow .tableinfo {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
 .drp-buttons {
   display: -webkit-box !important;
   display: -ms-flexbox !important;

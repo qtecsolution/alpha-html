@@ -59,6 +59,22 @@
                     letter-spacing: length(0.4);
                 }
             }
+
+            .smalltable {
+                .desktoptable-header {
+                    .tablerow {
+                        justify-content: flex-start;
+                    }
+                }
+
+                .desktoptable-body {
+                    .tablerow {
+                        .tableinfo {
+                            justify-content: flex-start;
+                        }
+                    }
+                }
+            }
         }
     }
 }
