@@ -3801,16 +3801,20 @@ button {
   letter-spacing: 0.025rem;
 }
 
+.routelist-body .routelists .smalltable {
+  max-width: 100%;
+}
+
 .routelist-body .routelists .smalltable .desktoptable-header .tablerow {
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .routelist-body .routelists .smalltable .desktoptable-body .tablerow .tableinfo {
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .drp-buttons {

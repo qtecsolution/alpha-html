@@ -61,16 +61,18 @@
             }
 
             .smalltable {
+                max-width: 100%;
+
                 .desktoptable-header {
                     .tablerow {
-                        justify-content: flex-start;
+                        justify-content: center;
                     }
                 }
 
                 .desktoptable-body {
                     .tablerow {
                         .tableinfo {
-                            justify-content: flex-start;
+                            justify-content: center;
                         }
                     }
                 }
