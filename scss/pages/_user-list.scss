@@ -17,6 +17,21 @@
         gap: length(64);
     }
 
+    .list-head {
+        @include flex-center-column;
+        gap: length(32);
+
+        .userlist-title {
+            @include font-face($montserrat, style('normal'), size(24), weight('bold'), line-height(31.68, 24));
+            color: $primary;
+        }
+
+        .rightdetails {
+            @include w100;
+            @include flex-end;
+        }
+    }
+
     .deliverylist-content {
         @include flex-column;
         gap: length(32);
@@ -24,6 +39,7 @@
 
     &-header {
         @include flex-center-between;
+        @include w100;
 
         @include breakpoint(phone768) {
             flex-direction: column;

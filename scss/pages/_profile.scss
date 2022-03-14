@@ -1,0 +1,213 @@
+.nav-tabs {
+    border: 0;
+    gap: length(14);
+
+    .nav-item {
+        width: calc((100% / 4) - .875rem);
+        flex-wrap: wrap;
+
+        @include breakpoint(tablet991) {
+            width: calc((100% / 2) - .875rem);
+        }
+
+        @include breakpoint(phone575) {
+            @include w100;
+        }
+
+        .nav-link {
+            border: 0;
+            margin: 0;
+            @include radius(5);
+            @include w100;
+            background: $tabLinkBg;
+            box-shadow: $tabLinkshadow;
+            @include flex-center-vert;
+            gap: length(14);
+            padding: length(25) length(20);
+
+            .icon {
+                @include square(length(55));
+                padding: length(5);
+                @include flex-center;
+                overflow: hidden;
+
+                svg {
+                    @include wh100;
+                }
+            }
+
+            .info {
+                @include flex-column;
+                align-items: flex-start;
+                gap: length(16);
+                text-align: left;
+
+                .infocounter {
+                    @include font-face($montserrat, style('normal'), size(14), weight('normal'), line-height(17.07, 14));
+                    color: $black;
+                }
+
+                .infotitle {
+                    @include font-face($montserrat, style('normal'), size(12), weight('light'), line-height(14.63, 12));
+                    color: $black;
+                }
+            }
+
+
+            &:hover:not(.active) {
+                background: $tabLinkActiveBg;
+
+                .divider {
+                    svg {
+                        line {
+                            stroke: $tabActiveDivider;
+                            stroke-opacity: 1;
+                        }
+                    }
+                }
+            }
+
+            &.active {
+                background: $tabLinkActiveBg;
+
+                .divider {
+                    svg {
+                        line {
+                            stroke: $tabActiveDivider;
+                            stroke-opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.profilesection {
+    padding-top: length(32);
+
+    @include breakpoint(tab992) {
+        padding-top: length(64);
+    }
+}
+
+.profileinfo {
+    padding: length(32) length(0);
+
+    @include breakpoint(tab992) {
+        padding: length(64) length(0);
+    }
+}
+
+.cardprofile {
+    @include flex-center-column;
+    background: $white;
+    @include radius(16);
+    overflow: hidden;
+    filter: $profileCardShadow;
+    text-align: center;
+    max-width: length(344);
+
+    &-header {
+        @include w100;
+        height: length(165);
+        position: relative;
+
+        img {
+            @include w100;
+            object-fit: cover;
+        }
+
+        .profile-thumb {
+            @include square(length(100));
+            @include circle;
+            @include flex-center;
+            overflow: hidden;
+            position: absolute;
+            left: 50%;
+            bottom: -50%;
+            @include transform(translate(-50%, -50%));
+
+            img {
+                @include wh100;
+                object-fit: cover;
+            }
+        }
+    }
+
+    &-body {
+        padding: length(40) length(16);
+
+        .username {
+            @include font-face($montserrat, style('normal'), size(24), weight('normal'), line-height(29.26, 24));
+            color: $username;
+        }
+
+        .divider {
+            margin: length(12) length(0) length(32);
+            @include w100;
+            height: length(1);
+            background: $profiledivider;
+        }
+
+        .usertext {
+            @include font-face($montserrat, style('normal'), size(14), weight('normal'), line-height(20, 14));
+            color: $usertext;
+            letter-spacing: length(0.25);
+        }
+    }
+}
+
+.profile-descript {
+    @include flex-between;
+    align-items: flex-start;
+
+    .profile-descriptions {
+        @include flex-column;
+        gap: length(36);
+
+        .descript {
+            display: flex;
+            gap: length(12);
+
+            .icon {
+                @include square(length(32));
+                @include flex-center;
+                overflow: hidden;
+
+                svg {
+                    @include wh100;
+                }
+            }
+
+            .profiledescribe {
+                @include flex-column;
+                gap: length(8);
+
+                .title {
+                    @include font-face($montserrat, style('normal'), size(32), weight('semibold'), line-height(39.01, 32));
+                    color: $textWelcome;
+                }
+
+                .text {
+                    @include font-face($montserrat, style('normal'), size(20), weight('normal'), line-height(32, 20));
+                    color: $primary;
+                    letter-spacing: length(0.25);
+                }
+            }
+        }
+    }
+
+    .editlink {
+        @include square(length(40));
+        @include flex-center;
+        padding: length(10) length(12);
+        background: $addBtnBg;
+        @include radius(4);
+        @include transitions;
+
+        @include hover {
+            background: darken($addBtnBg, 7%);
+        }
+    }
+}

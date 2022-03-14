@@ -22,6 +22,15 @@ $textSchedule: #B9B8B8;
 $faqBtnBg: #EDEDED;
 $checkBg: #231F20;
 
+$tabLinkBg: #F3FCFF;
+$tabLinkActiveBg: #B4DCEC;
+$tabActiveDivider: #79C3E1;
+
+$profiledivider: #C2C2C2;
+
+$username: #011627;
+$usertext: #646464;
+
 // NORMAL COLORS
 $black: #000000;
 $white: #ffffff;
@@ -63,6 +72,7 @@ $shade-2: rgba(52, 60, 68, 0.12);
 $shade-3: rgba(0, 0, 0, 0.12);
 $shade-4: rgba(0, 0, 0, 0.25);
 $shadow-5: rgba(124, 124, 124, 0.25);
+$shadow-6: #E0E0E0;
 
 $dropdownshadow: 0rem .125rem .5rem $shade-1,
 0rem 1rem 1.5rem $shade-2;
@@ -77,3 +87,7 @@ $rowshadow: inset 0rem -0.0625rem 0rem $addBtnBg;
 $suggestedShadow: 0rem .25rem .3125rem $shadow-5;
 
 $dateshadow: 0rem .25rem .3125rem $shade-4;
+
+$tabLinkshadow: .125rem .125rem .3125rem .0625rem $shadow-6;
+
+$profileCardShadow: drop-shadow(0 .125rem .25rem $shadow-1) drop-shadow(0 .5rem 1rem $shade-2);

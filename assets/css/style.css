@@ -3171,6 +3171,42 @@ button {
   gap: 4rem;
 }
 
+.userlist .list-head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+}
+
+.userlist .list-head .userlist-title {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.32;
+  color: #333333;
+}
+
+.userlist .list-head .rightdetails {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
 .userlist .deliverylist-content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3193,6 +3229,7 @@ button {
       -ms-flex-pack: justify;
           justify-content: space-between;
   align-items: center;
+  width: 100%;
 }
 
 @media screen and (max-width: 48rem) {
@@ -3885,6 +3922,341 @@ button {
   border: none;
   -webkit-box-shadow: 0rem 0.25rem 0.3125rem rgba(0, 0, 0, 0.25);
           box-shadow: 0rem 0.25rem 0.3125rem rgba(0, 0, 0, 0.25);
+}
+
+.nav-tabs {
+  border: 0;
+  gap: 0.875rem;
+}
+
+.nav-tabs .nav-item {
+  width: calc((100% / 4) - .875rem);
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .nav-tabs .nav-item {
+    width: calc((100% / 2) - .875rem);
+  }
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .nav-tabs .nav-item {
+    width: 100%;
+  }
+}
+
+.nav-tabs .nav-item .nav-link {
+  border: 0;
+  margin: 0;
+  border-radius: 0.3125rem;
+  border-radius: 0.3125rem;
+  width: 100%;
+  background: #F3FCFF;
+  -webkit-box-shadow: 0.125rem 0.125rem 0.3125rem 0.0625rem #E0E0E0;
+          box-shadow: 0.125rem 0.125rem 0.3125rem 0.0625rem #E0E0E0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.875rem;
+  padding: 1.5625rem 1.25rem;
+}
+
+.nav-tabs .nav-item .nav-link .icon {
+  height: 3.4375rem;
+  width: 3.4375rem;
+  padding: 0.3125rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.nav-tabs .nav-item .nav-link .icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.nav-tabs .nav-item .nav-link .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 1rem;
+  text-align: left;
+}
+
+.nav-tabs .nav-item .nav-link .info .infocounter {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.21929;
+  color: #000000;
+}
+
+.nav-tabs .nav-item .nav-link .info .infotitle {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: 300;
+  line-height: 1.21917;
+  color: #000000;
+}
+
+.nav-tabs .nav-item .nav-link:hover:not(.active) {
+  background: #B4DCEC;
+}
+
+.nav-tabs .nav-item .nav-link:hover:not(.active) .divider svg line {
+  stroke: #79C3E1;
+  stroke-opacity: 1;
+}
+
+.nav-tabs .nav-item .nav-link.active {
+  background: #B4DCEC;
+}
+
+.nav-tabs .nav-item .nav-link.active .divider svg line {
+  stroke: #79C3E1;
+  stroke-opacity: 1;
+}
+
+.profilesection {
+  padding-top: 2rem;
+}
+
+@media screen and (min-width: 62rem) {
+  .profilesection {
+    padding-top: 4rem;
+  }
+}
+
+.profileinfo {
+  padding: 2rem 0rem;
+}
+
+@media screen and (min-width: 62rem) {
+  .profileinfo {
+    padding: 4rem 0rem;
+  }
+}
+
+.cardprofile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #ffffff;
+  border-radius: 1rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  -webkit-filter: drop-shadow(0 0.125rem 0.25rem rgba(162, 162, 162, 0.25)) drop-shadow(0 0.5rem 1rem rgba(52, 60, 68, 0.12));
+          filter: drop-shadow(0 0.125rem 0.25rem rgba(162, 162, 162, 0.25)) drop-shadow(0 0.5rem 1rem rgba(52, 60, 68, 0.12));
+  text-align: center;
+  max-width: 21.5rem;
+}
+
+.cardprofile-header {
+  width: 100%;
+  height: 10.3125rem;
+  position: relative;
+}
+
+.cardprofile-header img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.cardprofile-header .profile-thumb {
+  height: 6.25rem;
+  width: 6.25rem;
+  border-radius: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+  position: absolute;
+  left: 50%;
+  bottom: -50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.cardprofile-header .profile-thumb img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.cardprofile-body {
+  padding: 2.5rem 1rem;
+}
+
+.cardprofile-body .username {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 1.5rem;
+  font-weight: normal;
+  line-height: 1.21917;
+  color: #011627;
+}
+
+.cardprofile-body .divider {
+  margin: 0.75rem 0rem 2rem;
+  width: 100%;
+  height: 0.0625rem;
+  background: #C2C2C2;
+}
+
+.cardprofile-body .usertext {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.42857;
+  color: #646464;
+  letter-spacing: 0.01562rem;
+}
+
+.profile-descript {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.profile-descript .profile-descriptions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.25rem;
+}
+
+.profile-descript .profile-descriptions .descript {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.75rem;
+}
+
+.profile-descript .profile-descriptions .descript .icon {
+  height: 2rem;
+  width: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.profile-descript .profile-descriptions .descript .icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.profile-descript .profile-descriptions .descript .profiledescribe {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+}
+
+.profile-descript .profile-descriptions .descript .profiledescribe .title {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.21906;
+  color: #343C44;
+}
+
+.profile-descript .profile-descriptions .descript .profiledescribe .text {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 1.25rem;
+  font-weight: normal;
+  line-height: 1.6;
+  color: #333333;
+  letter-spacing: 0.01562rem;
+}
+
+.profile-descript .editlink {
+  height: 2.5rem;
+  width: 2.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0.625rem 0.75rem;
+  background: #E5E5E5;
+  border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.profile-descript .editlink:not([disabled]):hover {
+  background: lightgray;
 }
 
 .decories-container {
