@@ -1,3 +1,308 @@
 /**=====================================================
-                    HOME-BANNER
+                    DASHBOARD
 =====================================================**/
+.graph {
+    padding: length(32) length(64) length(64);
+
+    @include breakpoint(tablet991) {
+        padding: length(24) length(32) length(32);
+    }
+
+    @include breakpoint(phone768) {
+        padding: length(24) length(20) length(32);
+    }
+
+    &-content {
+        padding: length(32);
+        @include border(solid, 1, $addBtnBg);
+        @include radius(4);
+        @include flex-column;
+        gap: length(32);
+    }
+
+    &-header {
+        @include flex-center-between;
+
+        .graph-title {
+            @include font-face($montserrat, style('normal'), size(24), weight('bold'), line-height(31.68, 24));
+            color: $primary;
+        }
+
+        .grapdrop {
+            position: relative;
+
+            .btn-drop {
+                @include transparent-button;
+            }
+
+            .dropinfo {
+                position: absolute;
+                top: length(-10);
+                right: 100%;
+                padding: length(0) length(10);
+                background: $white;
+                @extend %animation;
+                @extend %slideUpIn;
+                display: none;
+
+                .dropitem {
+                    @include border(solid, 1, $addBtnBg);
+                    @include radius(4);
+                    padding: length(10);
+                }
+
+                .daterangepicker {
+                    right: length(94) !important;
+                }
+            }
+
+            @include hover {
+                .dropinfo {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    &-body {
+        @include w100;
+
+        img {
+            @include w100;
+        }
+    }
+
+    &-footer {
+        @include flex-column;
+        gap: length(8);
+
+        hgroup {
+            .total-title {
+                @include font-face($montserrat, style('normal'), size(12), weight('normal'), line-height(24, 12));
+                color: $textGray;
+                letter-spacing: length(0.4);
+            }
+
+            .total-price {
+                @include font-face($montserrat, style('normal'), size(24), weight('bold'), line-height(31.68, 24));
+                color: $primary;
+            }
+        }
+
+        .percentages {
+            @include flex-center-vert;
+            gap: length(4);
+
+            .percent {
+                @include font-face($montserrat, style('normal'), size(12), weight('normal'), line-height(16, 12));
+                color: $successBg;
+                letter-spacing: length(0.4);
+            }
+        }
+    }
+}
+
+.dashboardlist {
+    @include flex-column;
+    gap: length(64);
+
+    .listbox {
+        .list-header {
+            @include flex-center;
+            text-align: center;
+            padding: length(0) length(80) length(0);
+
+            @include breakpoint(tablet991) {
+                padding: length(0) length(40) length(0);
+            }
+
+            @include breakpoint(phone768) {
+                padding: length(0) length(20) length(0);
+            }
+
+            .list-title {
+                @include font-face($montserrat, style('normal'), size(32), weight('normal'), line-height(31.68, 32));
+                color: $primary;
+                letter-spacing: length(0.25);
+            }
+        }
+
+        .list-body {
+            @include flex-end;
+            margin: length(32) length(0);
+            padding: length(0) length(80) length(0);
+
+            @include breakpoint(tablet991) {
+                padding: length(0) length(40) length(0);
+            }
+
+            @include breakpoint(phone768) {
+                padding: length(0) length(20) length(0);
+            }
+
+            .listdropdown {
+                position: relative;
+
+                .btn-dropdown {
+                    @include transparent-button;
+                }
+
+                .dropdownbox {
+                    position: absolute;
+                    top: 0;
+                    right: 100%;
+                    width: length(300);
+                    padding: length(16);
+                    @extend %animation;
+                    @extend %slideUpIn;
+                    display: none;
+
+                    .dropdownlist {
+                        @include list-vertical;
+                        background: $notifyBg;
+                        @include radius(8);
+                        box-shadow: $dropdowonshadow;
+
+                        &-item {
+                            position: relative;
+                            padding: length(12) length(16);
+                            @include border-single(bottom, solid, 1, $dropdownBorder);
+
+                            .subdropdown {
+                                position: absolute;
+                                top: 0;
+                                right: 100%;
+                                min-width: length(165);
+                                padding-right: length(4);
+                                @extend %animation;
+                                @extend %slideUpIn;
+                                display: none;
+
+                                .nav-tabs {
+                                    flex-direction: column;
+                                    border: 0;
+                                    background: $notifyBg;
+                                    @include radius(8);
+                                    box-shadow: $dropdowonshadow;
+
+                                    .nav-item {
+                                        @include border-single(bottom, solid, 1, $dropdownBorder);
+                                        padding: length(12) length(16);
+
+                                        @include hover {
+                                            .nav-link {
+                                                color: $green;
+                                            }
+                                        }
+                                    }
+
+                                    .nav-link {
+                                        margin: 0;
+                                        padding: 0;
+                                        border: 0;
+                                        border-radius: 0;
+                                        @include font-face($montserrat, style('normal'), size(14), weight('normal'), line-height(20, 14));
+                                        color: $textWelcome;
+                                        letter-spacing: length(0.25);
+                                        @include w100;
+                                        padding: 0;
+                                        text-align: left;
+                                    }
+                                }
+                            }
+
+                            &:last-of-type {
+                                .dropdownlist-link {
+                                    border-bottom: 0;
+                                }
+                            }
+
+                            &:hover:not(:first-child):not(:last-child) {
+                                .subdropdown {
+                                    display: block;
+                                }
+
+                                .dropdownlist-link {
+                                    .icon {
+                                        svg {
+                                            path {
+                                                fill: $green;
+                                            }
+                                        }
+                                    }
+
+                                    .text {
+                                        color: $green;
+                                    }
+                                }
+                            }
+
+                            &:first-child {
+                                @include hover {
+                                    .dropdownlist-link {
+                                        .icon {
+                                            svg {
+                                                path {
+                                                    stroke: $green;
+                                                }
+                                            }
+                                        }
+
+                                        .text {
+                                            color: $green;
+                                        }
+                                    }
+                                }
+                            }
+
+                            &:last-child {
+                                @include hover {
+                                    .dropdownlist-link {
+                                        .icon {
+                                            svg {
+                                                path {
+                                                    fill: $textDanger;
+                                                }
+                                            }
+                                        }
+
+                                        .text {
+                                            color: $textDanger;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        &-link {
+                            @include flex-center-vert;
+                            gap: length(16);
+
+                            .icon {
+                                @include square(length(24));
+                                @include flex-center;
+                                overflow: hidden;
+
+                                svg {
+                                    @include wh100;
+                                }
+                            }
+
+                            .text {
+                                @include font-face($montserrat, style('normal'), size(14), weight('normal'), line-height(20, 14));
+                                color: $textWelcome;
+                                letter-spacing: length(0.25);
+                            }
+                        }
+                    }
+                }
+
+                @include hover {
+                    .dropdownbox {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Encode+Sans:wght@300;400;500;600;700;800;900&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap");
-.header-top .header-dropdowns .notification-details, .header-top .header-dropdowns .userdropdown-body {
+.header-top .header-dropdowns .notification-details, .header-top .header-dropdowns .userdropdown-body, .graph-header .grapdrop .dropinfo, .dashboardlist .listbox .list-body .listdropdown .dropdownbox, .dashboardlist .listbox .list-body .listdropdown .dropdownbox .dropdownlist-item .subdropdown {
   -webkit-animation-duration: 250ms;
   animation-duration: 250ms;
   -webkit-animation-fill-mode: both;
@@ -96,7 +96,7 @@
   }
 }
 
-.header-top .header-dropdowns .notification-details, .header-top .header-dropdowns .userdropdown-body {
+.header-top .header-dropdowns .notification-details, .header-top .header-dropdowns .userdropdown-body, .graph-header .grapdrop .dropinfo, .dashboardlist .listbox .list-body .listdropdown .dropdownbox, .dashboardlist .listbox .list-body .listdropdown .dropdownbox .dropdownlist-item .subdropdown {
   -webkit-animation-name: slideUpIn;
   animation-name: slideUpIn;
 }
@@ -3546,8 +3546,388 @@ button {
 }
 
 /**=====================================================
-                    HOME-BANNER
+                    DASHBOARD
 =====================================================**/
+.graph {
+  padding: 2rem 4rem 4rem;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .graph {
+    padding: 1.5rem 2rem 2rem;
+  }
+}
+
+@media screen and (max-width: 48rem) {
+  .graph {
+    padding: 1.5rem 1.25rem 2rem;
+  }
+}
+
+.graph-content {
+  padding: 2rem;
+  border: solid 0.0625rem #E5E5E5;
+  border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+}
+
+.graph-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  align-items: center;
+}
+
+.graph-header .graph-title {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.32;
+  color: #333333;
+}
+
+.graph-header .grapdrop {
+  position: relative;
+}
+
+.graph-header .grapdrop .btn-drop {
+  background: transparent;
+  border: none;
+}
+
+.graph-header .grapdrop .dropinfo {
+  position: absolute;
+  top: -0.625rem;
+  right: 100%;
+  padding: 0rem 0.625rem;
+  background: #ffffff;
+  display: none;
+}
+
+.graph-header .grapdrop .dropinfo .dropitem {
+  border: solid 0.0625rem #E5E5E5;
+  border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  padding: 0.625rem;
+}
+
+.graph-header .grapdrop .dropinfo .daterangepicker {
+  right: 5.875rem !important;
+}
+
+.graph-header .grapdrop:not([disabled]):hover .dropinfo {
+  display: block;
+}
+
+.graph-body {
+  width: 100%;
+}
+
+.graph-body img {
+  width: 100%;
+}
+
+.graph-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+}
+
+.graph-footer hgroup .total-title {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: normal;
+  line-height: 2;
+  color: #9C9C9C;
+  letter-spacing: 0.025rem;
+}
+
+.graph-footer hgroup .total-price {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.32;
+  color: #333333;
+}
+
+.graph-footer .percentages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.25rem;
+}
+
+.graph-footer .percentages .percent {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: normal;
+  line-height: 1.33333;
+  color: #4AAF05;
+  letter-spacing: 0.025rem;
+}
+
+.dashboardlist {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 4rem;
+}
+
+.dashboardlist .listbox .list-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  padding: 0rem 5rem 0rem;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .dashboardlist .listbox .list-header {
+    padding: 0rem 2.5rem 0rem;
+  }
+}
+
+@media screen and (max-width: 48rem) {
+  .dashboardlist .listbox .list-header {
+    padding: 0rem 1.25rem 0rem;
+  }
+}
+
+.dashboardlist .listbox .list-header .list-title {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 2rem;
+  font-weight: normal;
+  line-height: 0.99;
+  color: #333333;
+  letter-spacing: 0.01562rem;
+}
+
+.dashboardlist .listbox .list-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin: 2rem 0rem;
+  padding: 0rem 5rem 0rem;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .dashboardlist .listbox .list-body {
+    padding: 0rem 2.5rem 0rem;
+  }
+}
+
+@media screen and (max-width: 48rem) {
+  .dashboardlist .listbox .list-body {
+    padding: 0rem 1.25rem 0rem;
+  }
+}
+
+.dashboardlist .listbox .list-body .listdropdown {
+  position: relative;
+}
+
+.dashboardlist .listbox .list-body .listdropdown .btn-dropdown {
+  background: transparent;
+  border: none;
+}
+
+.dashboardlist .listbox .list-body .listdropdown .dropdownbox {
+  position: absolute;
+  top: 0;
+  right: 100%;
+  width: 18.75rem;
+  padding: 1rem;
+  display: none;
+}
+
+.dashboardlist .listbox .list-body .listdropdown .dropdownbox .dropdownlist {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #FBFBFB;
+  border-radius: 0.5rem;
+  border-radius: 0.5rem;
+  -webkit-box-shadow: 0 0.125rem 0.5rem rgba(117, 131, 142, 0.04), 0 1rem 1.5rem rgba(52, 60, 68, 0.12);
+          box-shadow: 0 0.125rem 0.5rem rgba(117, 131, 142, 0.04), 0 1rem 1.5rem rgba(52, 60, 68, 0.12);
+}
+
+.dashboardlist .listbox .list-body .listdropdown .dropdownbox .dropdownlist-item {
+  position: relative;
+  padding: 0.75rem 1rem;
+  border-bottom: solid 0.0625rem #D6E4EC;
+}
+
+.dashboardlist .listbox .list-body .listdropdown .dropdownbox .dropdownlist-item .subdropdown {
+  position: absolute;
+  top: 0;
+  right: 100%;
+  min-width: 10.3125rem;
+  padding-right: 0.25rem;
+  display: none;
+}
+
+.dashboardlist .listbox .list-body .listdropdown .dropdownbox .dropdownlist-item .subdropdown .nav-tabs {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 0;
+  background: #FBFBFB;
+  border-radius: 0.5rem;
+  border-radius: 0.5rem;
+  -webkit-box-shadow: 0 0.125rem 0.5rem rgba(117, 131, 142, 0.04), 0 1rem 1.5rem rgba(52, 60, 68, 0.12);
+          box-shadow: 0 0.125rem 0.5rem rgba(117, 131, 142, 0.04), 0 1rem 1.5rem rgba(52, 60, 68, 0.12);
+}
+
+.dashboardlist .listbox .list-body .listdropdown .dropdownbox .dropdownlist-item .subdropdown .nav-tabs .nav-item {
+  border-bottom: solid 0.0625rem #D6E4EC;
+  padding: 0.75rem 1rem;
+}
+
+.dashboardlist .listbox .list-body .listdropdown .dropdownbox .dropdownlist-item .subdropdown .nav-tabs .nav-item:not([disabled]):hover .nav-link {
+  color: #8AC27B;
+}
+
+.dashboardlist .listbox .list-body .listdropdown .dropdownbox .dropdownlist-item .subdropdown .nav-tabs .nav-link {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.42857;
+  color: #343C44;
+  letter-spacing: 0.01562rem;
+  width: 100%;
+  padding: 0;
+  text-align: left;
+}
+
+.dashboardlist .listbox .list-body .listdropdown .dropdownbox .dropdownlist-item:last-of-type .dropdownlist-link {
+  border-bottom: 0;
+}
+
+.dashboardlist .listbox .list-body .listdropdown .dropdownbox .dropdownlist-item:hover:not(:first-child):not(:last-child) .subdropdown {
+  display: block;
+}
+
+.dashboardlist .listbox .list-body .listdropdown .dropdownbox .dropdownlist-item:hover:not(:first-child):not(:last-child) .dropdownlist-link .icon svg path {
+  fill: #8AC27B;
+}
+
+.dashboardlist .listbox .list-body .listdropdown .dropdownbox .dropdownlist-item:hover:not(:first-child):not(:last-child) .dropdownlist-link .text {
+  color: #8AC27B;
+}
+
+.dashboardlist .listbox .list-body .listdropdown .dropdownbox .dropdownlist-item:first-child:not([disabled]):hover .dropdownlist-link .icon svg path {
+  stroke: #8AC27B;
+}
+
+.dashboardlist .listbox .list-body .listdropdown .dropdownbox .dropdownlist-item:first-child:not([disabled]):hover .dropdownlist-link .text {
+  color: #8AC27B;
+}
+
+.dashboardlist .listbox .list-body .listdropdown .dropdownbox .dropdownlist-item:last-child:not([disabled]):hover .dropdownlist-link .icon svg path {
+  fill: #FF5756;
+}
+
+.dashboardlist .listbox .list-body .listdropdown .dropdownbox .dropdownlist-item:last-child:not([disabled]):hover .dropdownlist-link .text {
+  color: #FF5756;
+}
+
+.dashboardlist .listbox .list-body .listdropdown .dropdownbox .dropdownlist-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+
+.dashboardlist .listbox .list-body .listdropdown .dropdownbox .dropdownlist-link .icon {
+  height: 1.5rem;
+  width: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.dashboardlist .listbox .list-body .listdropdown .dropdownbox .dropdownlist-link .icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.dashboardlist .listbox .list-body .listdropdown .dropdownbox .dropdownlist-link .text {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.42857;
+  color: #343C44;
+  letter-spacing: 0.01562rem;
+}
+
+.dashboardlist .listbox .list-body .listdropdown:not([disabled]):hover .dropdownbox {
+  display: block;
+}
+
 /**=====================================================
                     DIAMOND-BANNER
 =====================================================**/
@@ -3924,120 +4304,6 @@ button {
           box-shadow: 0rem 0.25rem 0.3125rem rgba(0, 0, 0, 0.25);
 }
 
-.nav-tabs {
-  border: 0;
-  gap: 0.875rem;
-}
-
-.nav-tabs .nav-item {
-  width: calc((100% / 4) - .875rem);
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-@media screen and (max-width: 61.9375rem) {
-  .nav-tabs .nav-item {
-    width: calc((100% / 2) - .875rem);
-  }
-}
-
-@media screen and (max-width: 35.9375rem) {
-  .nav-tabs .nav-item {
-    width: 100%;
-  }
-}
-
-.nav-tabs .nav-item .nav-link {
-  border: 0;
-  margin: 0;
-  border-radius: 0.3125rem;
-  border-radius: 0.3125rem;
-  width: 100%;
-  background: #F3FCFF;
-  -webkit-box-shadow: 0.125rem 0.125rem 0.3125rem 0.0625rem #E0E0E0;
-          box-shadow: 0.125rem 0.125rem 0.3125rem 0.0625rem #E0E0E0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 0.875rem;
-  padding: 1.5625rem 1.25rem;
-}
-
-.nav-tabs .nav-item .nav-link .icon {
-  height: 3.4375rem;
-  width: 3.4375rem;
-  padding: 0.3125rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  overflow: hidden;
-}
-
-.nav-tabs .nav-item .nav-link .icon svg {
-  width: 100%;
-  height: 100%;
-}
-
-.nav-tabs .nav-item .nav-link .info {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  gap: 1rem;
-  text-align: left;
-}
-
-.nav-tabs .nav-item .nav-link .info .infocounter {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-size: 0.875rem;
-  font-weight: normal;
-  line-height: 1.21929;
-  color: #000000;
-}
-
-.nav-tabs .nav-item .nav-link .info .infotitle {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-size: 0.75rem;
-  font-weight: 300;
-  line-height: 1.21917;
-  color: #000000;
-}
-
-.nav-tabs .nav-item .nav-link:hover:not(.active) {
-  background: #B4DCEC;
-}
-
-.nav-tabs .nav-item .nav-link:hover:not(.active) .divider svg line {
-  stroke: #79C3E1;
-  stroke-opacity: 1;
-}
-
-.nav-tabs .nav-item .nav-link.active {
-  background: #B4DCEC;
-}
-
-.nav-tabs .nav-item .nav-link.active .divider svg line {
-  stroke: #79C3E1;
-  stroke-opacity: 1;
-}
-
 .profilesection {
   padding-top: 2rem;
 }
@@ -4056,6 +4322,120 @@ button {
   .profileinfo {
     padding: 4rem 0rem;
   }
+}
+
+.profileinfo .nav-tabs {
+  border: 0;
+  gap: 0.875rem;
+}
+
+.profileinfo .nav-tabs .nav-item {
+  width: calc((100% / 4) - .875rem);
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .profileinfo .nav-tabs .nav-item {
+    width: calc((100% / 2) - .875rem);
+  }
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .profileinfo .nav-tabs .nav-item {
+    width: 100%;
+  }
+}
+
+.profileinfo .nav-tabs .nav-item .nav-link {
+  border: 0;
+  margin: 0;
+  border-radius: 0.3125rem;
+  border-radius: 0.3125rem;
+  width: 100%;
+  background: #F3FCFF;
+  -webkit-box-shadow: 0.125rem 0.125rem 0.3125rem 0.0625rem #E0E0E0;
+          box-shadow: 0.125rem 0.125rem 0.3125rem 0.0625rem #E0E0E0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.875rem;
+  padding: 1.5625rem 1.25rem;
+}
+
+.profileinfo .nav-tabs .nav-item .nav-link .icon {
+  height: 3.4375rem;
+  width: 3.4375rem;
+  padding: 0.3125rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.profileinfo .nav-tabs .nav-item .nav-link .icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.profileinfo .nav-tabs .nav-item .nav-link .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 1rem;
+  text-align: left;
+}
+
+.profileinfo .nav-tabs .nav-item .nav-link .info .infocounter {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.21929;
+  color: #000000;
+}
+
+.profileinfo .nav-tabs .nav-item .nav-link .info .infotitle {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: 300;
+  line-height: 1.21917;
+  color: #000000;
+}
+
+.profileinfo .nav-tabs .nav-item .nav-link:hover:not(.active) {
+  background: #B4DCEC;
+}
+
+.profileinfo .nav-tabs .nav-item .nav-link:hover:not(.active) .divider svg line {
+  stroke: #79C3E1;
+  stroke-opacity: 1;
+}
+
+.profileinfo .nav-tabs .nav-item .nav-link.active {
+  background: #B4DCEC;
+}
+
+.profileinfo .nav-tabs .nav-item .nav-link.active .divider svg line {
+  stroke: #79C3E1;
+  stroke-opacity: 1;
 }
 
 .cardprofile {

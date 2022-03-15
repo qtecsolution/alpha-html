@@ -61,6 +61,8 @@ $footerBg: #25A8E0;
 $assignText: #606064;
 $textTitle: #252733;
 
+$green: #8AC27B;
+
 // SHADOWS
 $shadow-1: rgba(162, 162, 162, 0.25);
 $banner: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 67.71%);
@@ -91,3 +93,6 @@ $dateshadow: 0rem .25rem .3125rem $shade-4;
 $tabLinkshadow: .125rem .125rem .3125rem .0625rem $shadow-6;
 
 $profileCardShadow: drop-shadow(0 .125rem .25rem $shadow-1) drop-shadow(0 .5rem 1rem $shade-2);
+
+$dropdowonshadow: 0 .125rem .5rem $shade-1,
+0 1rem 1.5rem $shade-2
